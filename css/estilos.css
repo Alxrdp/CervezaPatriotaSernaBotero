@@ -1,0 +1,210 @@
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* fuente descargada en el pc */
+
+@font-face {
+	font-family: 'Roboto';
+	src: url('../assets/fonts/Roboto-Light.ttf');
+    color:rgb(77, 53, 23)
+}
+
+@font-face {
+	font-family: 'open sans';
+	src: url('../assets/fonts/Open_Sans/OpenSans-Light.ttf');
+    color:rgb(77, 53, 23)
+}
+
+@font-face {
+	font-family: 'Belleza';
+	src: url('../assets/fonts/Belleza-Regular.ttf');
+    color:rgb(77, 53, 23)
+}
+
+
+header{
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 10%;
+	position: fixed;
+	z-index: 100;
+	display: inline-block;
+}
+header h1 {
+	font-family: 'Roboto', sans-serif;
+	font-size: 3rem;
+	text-decoration-color: bisque;
+}
+img {
+	height: auto;
+	max-width: 100%;
+	float:left
+}
+
+
+
+/* se crea el estilo de los botones de navegacion*/
+
+nav {
+	float: right;
+	font-family: 'open sans', sans-serif;
+
+
+	
+}
+
+nav ul {
+	list-style: none;
+	
+	
+}
+  
+nav ul li{
+	float: left;
+	font-family: 'open sans', sans-serif;
+	font-size: 1rem;
+}
+nav ul li a {
+	display: block;
+	padding: 10px;
+	color: #d4d4cf;
+	text-decoration: none;
+	
+}
+nav ul li:hover {
+	background: #291901;
+	text-decoration: none;
+	
+}
+
+nav ul li a:hover{
+	color:rgb(224, 168, 95)
+}
+
+/*.menu, .submenu {
+	font-size: 0;
+	/* truco por el uso de inline-block
+	list-style: none;
+}
+
+
+.menu li {
+	display: inline-block;
+	width: 15%;
+	position: relative;
+	font-size: 2rem;
+}*/
+
+body {
+	font-family: 'Open Sans', sans-serif;
+	font-family: 'Roboto', sans-serif;
+	background-color: rgba(254, 177, 63, 0.8);
+	overflow-x: hidden;
+	
+	
+}
+
+
+
+a {
+	color: rgba(10, 10, 10, 0.781);
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 1.2rem;
+	line-height: 1rem;
+	border-radius: 5%;
+}
+
+
+
+/* seccion parallax */
+
+.parallax {
+	/* Imagen*/
+	background-image: url("../img/cebada_Patriota.jpg");
+	height: 700px;
+	background-attachment: fixed;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	padding: 30px 30px;
+}
+/*estilos de los parrafos*/
+.parallax h2, .parallax p{
+	text-align: left;
+	font-size: larger;
+	/*mask-position: left;*/
+	position: absolute;
+	width: 45%;
+	height: 300px;
+	left: 30px;
+	top: 250px;
+	padding: 8px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius:8px;
+}
+
+.parallax h4, .parallax p {
+	font-size: larger;
+	padding: 20px 50px;
+	background-color: rgba(255, 255, 255, 0.7);
+	border-radius:8px;
+}
+
+.parallax h4 {
+	text-align: center;
+	text-transform: capitalize;
+	padding-top: 20px;
+}
+
+
+footer {
+	background: wheat;
+	padding: 1rem;
+	text-decoration: #291901;
+	text-align: center;
+	position: initial;
+  }
+footer a{
+	text-decoration: none;
+	color:#0c0c0cd2;
+}
+footer a:hover{
+	color: rgb(224, 168, 95);
+}
+.container-fluid{
+	display: block;
+    align-items: center;
+    
+	
+}
+
+.contenedorRedes:hover{
+	display: block;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* vista desktop */
+@media only screen and (min-width: 1024px) {
+	.navbar-expand-lg .navbar-collapse {
+		   justify-content: flex-end;
+		   
+	}
+   
+.footerFlex {
+	   display: flex;
+	   justify-content: center;
+	}
+}
+   
+/* vista mobile */
+@media only screen and (max-width: 767px) {
+.footerFlex {
+	   display: flex;
+	   flex-direction: column;
+	}
+}
