@@ -2,6 +2,7 @@
 	margin: 0;
 	padding: 0;
 	box-sizing: border-box;
+	
 }
 
 /* fuente descargada en el pc */
@@ -23,41 +24,56 @@
 	src: url('../assets/fonts/Belleza-Regular.ttf');
     color:rgb(77, 53, 23)
 }
-img {
-	height: auto;
-	max-width: 100%;
-	
-}
-/* se crea el estilo de los botones de navegacion*/
-.header__sticky a{
-   	color:#8C8119;
-	text-decoration: none;
-    font-size: 1.2rem;
-    display: inline-block; 
-    padding: 10px;
-    margin:10px;
-	background: #D9D9D9;
-	box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.22);
-	border-radius: 5px;      
-}
 
-body {
-	font-family: 'Open Sans', sans-serif;
-	font-family: 'Roboto', sans-serif;
-	background-color: rgba(254, 177, 63, 0.8);
+body { 
+	height: 100vh;
 	overflow-x: hidden;
 }
+/*se fija el header*/
+header{
+	background: rgba(0,0,0,0.7);
+	width: 100%;
+	height: 8%;
+	position: fixed;
+	display: inline-block;
+}
 
-h1{
-	font-family: 'Open Sans', sans-serif;
-	font-family: 'Roboto', sans-serif;
-	margin-left: 10px;
-	margin-top: 1px;
-	display:inline-flexbox;
+
+
+
+/* se crea el estilo de los botones de navegacion*/
+nav {
+	float: right;
+	font-family: 'open sans', sans-serif;
+}
+
+nav ul {
+	list-style: none;
+}
+
+nav ul li{
+	float: left;
+	font-family: 'open sans', sans-serif;
+	font-size: 1rem;
+}
+nav ul li a {
+	display: block;
+	padding: 15px;
+	color: #d4d4cf;
+	text-decoration: none;
+	
+}
+nav ul li:hover {
+	background: #291901;
+	text-decoration: none;
+}
+
+nav ul li a:hover{
+	color:rgb(224, 168, 95)
 }
 
 a {
-	color: rgba(0, 0, 0, 0.37);
+	color: rgba(10, 10, 10, 0.781);
 	font-weight: 600;
 	text-decoration: none;
 	font-size: 1.2rem;
@@ -65,103 +81,81 @@ a {
 	border-radius: 5%;
 }
 
-/*estilos del navegador*/
 
-nav {
-	position: relative;
-	font-family: 'Open Sans', sans-serif;
-	bottom: 50px;
-	left: 450px;
-}
 
-.menu, .submenu {
-	font-size: 0;
-	/* truco por el uso de inline-block*/
-	list-style: none;
-}
-
-.menu li {
-	display: inline-block;
-	width: 15%;
-	position: relative;
-	font-size: 2rem;
-}
-
-/* seccion parallax */
-
-.parallax {
-	/* Imagen*/
+/* Imagen fija de fondo*/
+.textoImagen {
 	background-image: url("../img/cebada_Patriota.jpg");
-	height: 700px;
+	max-height: 100vh;
 	background-attachment: fixed;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
-	padding: 30px 30px;
-}
-/*estilos de los parrafos*/
-.parallax h2, .parallax p{
-	text-align: left;
-	font-size: larger;
-	mask-position: left;
-	position: absolute;
-	width: 45%;
-	height: 300px;
-	left: 30px;
-	top: 250px;
-	padding: 8px;
-	background-color: rgba(255, 255, 255, 0.7);
-	border-radius:8px;
+	padding: auto;
+	margin-bottom: 0;
 }
 
-.parallax h4, .parallax p {
-	font-size: larger;
-	padding: 20px 50px;
-	background-color: rgba(255, 255, 255, 0.7);
-	border-radius:8px;
+.tituloIndex{
+	margin-top: 10%;
+	font-family: 'Open Sans', sans-serif;
+	color: rgba(10, 10, 10, 0.781);
+	font-weight: 600;
+	text-decoration: none;
+	font-size: 5rem;	
 }
 
-.parallax h4 {
+/*parrafo al lado de la imagen del index*/
+.textoImagen p {
+	font-size: 1rem;
+	padding: 5px;
+	background-color: rgba(255, 255, 255, 0.877);
+	border-radius:4px;
+	text-align:justify;
+	height: auto;
+	margin-bottom: 0%;
+}
+
+/*imagen que acompaña el texto en el index*/
+.textoImagen img{
+	padding: 4px;
+	background-color: rgba(255, 255, 255, 0.877);
+	border-radius:2px;
+	justify-content: center;
+	height: auto;
+	height:fit-content;
+	max-width: 100%;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	
+}
+/*footer, redes, copy, todo centrado*/
+footer {
+	background: wheat;
+	padding: 1rem;
+	text-decoration: #291901;
 	text-align: center;
-	text-transform: capitalize;
-	padding-top: 20px;
+	position:fixed;
+    bottom: 0;	
+}
+footer a{
+	text-decoration: none;
+	color:#0c0c0cd2;
+}
+footer a:hover{
+	color: rgb(224, 168, 95);
+}
+.container-fluid{
+	display: block;
+    align-items: center;
 }
 
-.parallax h5, .parallax p {
-	text-align: left;
-	font-size: larger;
-	mask-position: left;
-	position: absolute;
-	width: 22%;
-	height: 82%;
-	left: 30px;
-	top: 230px;
-	padding: 9px;
-	background-color: rgba(255, 255, 255, 0.7);
-	border-radius:8px;
+/* pantalla pequeña */
+	@media (max-width: 767px) {
 }
-.parallax h5 {
-	text-align: left;
-	text-transform: capitalize;
-	padding-top: 20px;
+/* Pantallas medianas */
+	@media (min-width: 768px) and (max-width: 991px) {
 }
 
-.parallax p {
-	text-align: justify;
-}
-/*footer*/
-.parrafoIndex{
-	text-align: right;
-	margin-right: 1px;
-	margin-bottom: 1px;
-}
-.footer{
-	/*display:inline-block;*/
-	margin-top: 1rem;
-    margin-bottom: 1rem;
-    padding:1%;
-}
-.contenedorRedes{
-	align-items: start;
-	align-items: stretch;
+/*Pantallas grandes */
+	@media (min-width: 992px) {
 }
