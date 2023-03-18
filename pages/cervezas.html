@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,42 +10,85 @@
     <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="../css/estilos.css">
     <link rel="stylesheet" href="../css/all.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
-    <header class="header__sticky">
-        <!-- logo -->
-		<img id="top" src="../img/Logo-Patriota.png" alt="logo sitio">
-		<!-- fin logo -->
-		<h1>Cervezas</h1>
-		<!-- inicio nav -->
-        <nav>
-            <ul class="menu">
-                <li><a class="link" href="../index.html">Home</a></li>
-                <li><a class="link" href="./historia.html">Historia</a></li>
-                <li><a class="link" href="./cerveceria.html">Cervecería</a></li>
-                <li><a class="link" href="">Cervezas</a></li>
-                <li><a class="link" href="./ubicacion.html">Ubicación</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main>
-        <div class="parallax">
-            <h2> lorem ipsum dolor sit amet consectetur adipisicing elit. Aut voluptatum ipsam adipisci, necessitatibus vero consequatur dolor. Quas aut natus illum sit dolor nam ducimus cum at! Nemo quaerat fugit atque.
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati quod ut ea, neque voluptatibus harum magni dolores est ducimus aliquam perferendis consequuntur officiis earum adipisci ipsam doloribus repellendus commodi voluptatum! Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora consequuntur alias perferendis nam dolorem. Officiis, deserunt perspiciatis dolorem cupiditate a, sapiente ab reprehenderit soluta vero laboriosam explicabo optio nemo assumenda! Lorem ipsum, dolor sit amet consectetur adipisicing elit. Cum nemo officiis sint maxime repellat itaque in nesciunt hic consectetur commodi, vitae ea corrupti delectus! Ut rem sed in quaerat illum!
-            </h2> 
-                     
-        </div>
-    </main>
-    <footer class="footer">
-        <!--<a href="#top"><img src="./assets/flecha_top.png" alt="ir a top"></a>
-        <a href="#top">Ir al Top</a> -->
-        <div class="parrafoIndex"
-            <a href =>Copyright © 2023</a>
-        </div>
-        <div class="contenedorRedes">
-            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="#" target="_blank"><i class="fab fa-twitter"></i></a>
-        </div>        
-    </footer>
+<body>
+<header>
+  <!-- se llama al logo -->
+      <img id="top" src="../img/Logo-Patriota.png" alt="logoSitio">
+  <!-- termina logo -->
+  <!-- inicio nav -->
+      <nav>
+          <ul class="MenuNavegador">
+              <li><a class="link" href="../index.html">Home</a></li>
+              <li><a class="link" href="../pages/historia.html">Historia</a></li>
+              <li><a class="link" href="../pages/cerveceria.html">Cervecería</a></li>
+              <li><a class="link" href="  ">Cervezas</a></li>
+              <li><a class="link" href="../pages/ubicacion.html">Ubicación</a></li>
+          </ul>
+      </nav>
+      <!--termina nav-->
+</header>
+<div class="page_content">
+<main class="container-fluid">
+    <div class="contenedorCervezas">
+        <div class="row row-cols-1 row-cols-md-4 g-5 m-5 position-relative" style="text-align: center">
+            <div class="col">
+              <div class="card">
+                <img src="../img/Patriota-Valerosa-2B.png" style="max-width: 80%;margin-top: 10px;" class="card-img-top align-content-center" alt="Cerveza Valerosa">
+                <div class="card-body">
+                  <h2 class="card-title1">Valerosa</h2>
+                  <p class="fst-italic">Blonde Ale</p>
+                    <p>Ganadora de 5 medallas de oro a nivel nacional y 2 reconocimientos intl. Cerveza rubia con aromas frutales a manzanas verdes y cascara de naranja</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../img/Patriota-Benkos-2B.png" style="max-width: 80%;margin-top: 10px;" class="card-img-top" alt="Cerveza Benkos">
+                <div class="card-body">
+                  <h2 class="card-title2">Benkos</h2>
+                  <p class="fst-italic">Stout</p>
+                    <p>Cerveza negra con adiciones de malta de cebada tostada, trigo y avena con aromas a café y chocolate y un delicioso sabor a capuchino suave</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../img/Patriota-Anaray-2B.png" style="max-width: 80%;margin-top: 10px;" class="card-img-top" alt="Cerveza Anaray">
+                <div class="card-body">
+                  <h2 class="card-title3">Anaray</h2>
+                  <p class="fst-italic">Fruit Beer</p>
+                    <p>Cerveza de trigo con una adición de duraznos naturales de Boyacá con un aroma característico a durazno y sutil sabor a frutas cítricas</p>
+                </div>
+              </div>
+            </div>
+            <div class="col">
+              <div class="card">
+                <img src="../img/Patriota-Rooke-2B.png" style="max-width: 80%; margin-top: 10px; margin-left: 10px;" class="card-img-top" alt="Cerveza Rooke">
+                <div class="card-body">
+                  <h2 class="card-title4">Rooke</h2>
+                  <p class="fst-italic">Scottish Export</p>
+                    <p>Cerveza roja con sabor y aroma característicos a malta, con ligeros toques acaramelados y de frutos rojos, que proporcionan un final seco</p>
+                </div>
+              </div>
+            </div>
+          </div>
+    </div>     
+</main>
+</div>
 </body>
+    <footer>
+        <a class="contenedorRedes">
+            <div>
+                <a href =>Copyright © 2023</a>
+            </div>
+          <a href="https://www.instagram.com/" target="_blank"<i class="fab fa-instagram"></i></a>
+          <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
+          <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
+        </a>
+    </footer>
+    
+
+<script src="scripts.js"></script>
 </html>
