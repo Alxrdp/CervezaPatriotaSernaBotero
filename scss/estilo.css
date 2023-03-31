@@ -1,0 +1,319 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fuente descargada en el pc */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Light.ttf");
+  color: rgb(77, 53, 23);
+}
+@font-face {
+  font-family: "open sans";
+  src: url("../assets/fonts/Open_Sans/OpenSans-Light.ttf");
+  color: rgb(77, 53, 23);
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../assets/fonts/Inter-Medium.ttf");
+  color: rgb(77, 53, 23);
+}
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/*se fija el header*/
+header {
+  background: rgba(0, 0, 0, 0.7);
+  margin-top: 0;
+  width: 100%;
+  height: 6%;
+  position: fixed;
+  display: inline-block;
+  margin-bottom: 10px;
+  z-index: 10;
+}
+
+/* se crea el estilo de los botones de navegacion*/
+nav {
+  float: right;
+  font-family: "Inter", sans-serif;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+  font-family: "open sans", sans-serif;
+  font-size: 1rem;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  color: #d4d4cf;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background: #291901;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: rgb(224, 168, 95);
+}
+
+a {
+  color: rgba(10, 10, 10, 0.781);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  border-radius: 5%;
+}
+
+.tituloH1 {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+
+.contenedorMain {
+  margin-top: auto;
+  height: auto;
+  width: auto;
+}
+
+.imagenHistoria {
+  background-image: url(../img/fondo_historia.png);
+  height: 100vh;
+  margin: 0%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Open sans", sans-serif;
+  position: relative;
+  z-index: 0;
+}
+.imagenHistoria .textoHistoria {
+  padding: 10%;
+  text-align: center;
+}
+
+.pageContentCervezas {
+  background-image: url(../img/burbujas1.png);
+  height: 100vh;
+  margin: 0%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Open sans", sans-serif;
+  display: flex;
+  position: relative;
+}
+
+.ContenVideo video {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+.ContenVideo h1 {
+  letter-spacing: -7px;
+  font-family: "Inter", sans-serif;
+  color: aliceblue;
+  font-size: 8rem;
+  font-weight: bolder;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4392156863), 1px 1px 1px rgba(0, 0, 0, 0.4392156863), -2px 2px 1px rgba(0, 0, 0, 0.4392156863), 2px -2px 1px rgba(0, 0, 0, 0.4392156863);
+}
+.ContenVideo p {
+  font-size: 5rem;
+  letter-spacing: -4px;
+}
+
+.fst-italic {
+  font-size: 1.5rem;
+}
+
+.card {
+  position: unset !important;
+  align-items: center;
+}
+
+.card-text1 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.card-text2 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.card-text3 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.card-text4 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.tituloIndex {
+  margin-top: 0;
+  font-family: "Belleza", sans-serif;
+  color: rgba(10, 10, 10, 0.836);
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+.imagenindex {
+  border-radius: 1%;
+}
+
+/*parrafo al lado de la imagen del index*/
+.textoImagen p {
+  font-size: 1rem;
+  border-radius: 4px;
+  height: auto;
+  margin-bottom: 0;
+}
+
+/*imagen que acompaña el texto en el index*/
+.textoImagen img {
+  border-radius: 2px;
+  justify-content: center;
+  height: -moz-fit-content;
+  height: fit-content;
+  max-width: 100%;
+}
+
+.TituloParrafoIndex {
+  padding: 4px;
+  border-radius: 2px;
+  text-align: center;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.imgParraIn {
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.877);
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.contenUbicacion {
+  height: 100vh;
+  font-size: 5rem;
+  background-image: url(../img/burbujas1.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.contenDirecciones {
+  background-position: center;
+  display: flex;
+  align-items: center;
+  font-family: Inter, sans-serif;
+  font-weight: bolder;
+  position: relative;
+  text-align: center;
+  width: 90%;
+  height: 70%;
+  margin: 10%;
+  padding: 1%;
+  border-radius: 0.5%;
+  background-color: rgba(0, 0, 0, 0.631372549);
+  color: aliceblue;
+}
+
+.mapa-responsive {
+  width: 50%;
+  margin-left: 9%;
+  position: relative;
+}
+
+/*.ImagenUbicacion{
+	width:50%;
+	height:0;
+	position: relative;
+
+	}*/
+/*footer, redes, copy, todo centrado*/
+footer {
+  background: rgba(0, 0, 0, 0.7);
+  padding: 0.1rem;
+  text-align: center;
+  z-index: 10;
+}
+
+footer a {
+  text-decoration: none;
+  color: #d4d4cf;
+  font-size: 1rem;
+}
+
+footer a:hover {
+  color: rgb(224, 168, 95);
+}
+
+/* pantalla pequeña */
+@media only screen and (max-width: 767px) {
+  .textoImagen img {
+    height: auto;
+  }
+  header {
+    height: 20%;
+  }
+  footer {
+    height: auto;
+  }
+}
+/* Pantalla mediana */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #encabezado {
+    height: auto;
+  }
+  #contenido {
+    width: auto;
+  }
+  #barra_lateral {
+    display: none;
+  }
+}
+/*Pantalla grande */
+@media (min-width: 992px) {
+  #contenedor {
+    width: 90%;
+  }
+  #contenido {
+    width: 60%;
+  }
+  #barra_lateral {
+    width: 30%;
+  }
+}/*# sourceMappingURL=estilo.css.map */
