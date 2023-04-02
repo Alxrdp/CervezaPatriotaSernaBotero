@@ -1,0 +1,483 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* fuente descargada en el pc */
+@font-face {
+  font-family: "Roboto";
+  src: url("../assets/fonts/Roboto-Light.ttf");
+  color: rgb(77, 53, 23);
+}
+@font-face {
+  font-family: "open sans";
+  src: url("../assets/fonts/Open_Sans/OpenSans-Light.ttf");
+  color: rgb(77, 53, 23);
+}
+@font-face {
+  font-family: "Inter", sans-serif;
+  src: url("../assets/fonts/Inter-Medium.ttf");
+  color: rgb(77, 53, 23);
+}
+body {
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  overflow-x: hidden;
+}
+
+/*se fija el header*/
+header {
+  background: rgba(83, 69, 22, 0.637);
+  margin-top: 0;
+  width: 100%;
+  height: 6%;
+  position: fixed;
+  display: inline-block;
+  margin-bottom: 10px;
+  z-index: 10;
+  box-shadow: 5px 5px 15px gray;
+}
+
+.hamburguesa {
+  display: none;
+  position: fixed;
+  margin: 1%;
+  z-index: 10;
+  float: right;
+  /* Estilo del boton cuando se pasa el mouse por encima*/
+  /* Estilo del boton cuando el menú está expandido*/
+  /*Estilo cuando el mouse pasa encima de cada link del menu*/
+}
+.hamburguesa ul {
+  display: none;
+}
+.hamburguesa input:checked ~ ul {
+  display: block;
+}
+.hamburguesa input {
+  display: none;
+}
+.hamburguesa label {
+  box-sizing: border-box;
+  display: inline-block;
+  border: 1px solid black;
+  border-radius: 5px;
+  width: 30px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+}
+.hamburguesa label:hover {
+  background: rgba(128, 128, 128, 0);
+}
+.hamburguesa input:checked ~ label {
+  background: rgba(12, 3, 3, 0.205);
+}
+.hamburguesa ul {
+  margin-top: 0;
+  padding: 0;
+  width: 200px;
+}
+.hamburguesa li {
+  display: block;
+  margin: 0;
+  padding: 10px;
+  list-style: none;
+}
+.hamburguesa li:hover {
+  filter: brightness(110%);
+}
+
+/* se crea el estilo de los botones de navegacion*/
+nav {
+  float: right;
+  font-family: "Inter", sans-serif;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  float: left;
+  font-family: "open sans", sans-serif;
+  font-size: 1rem;
+}
+
+nav ul li a {
+  display: block;
+  padding: 15px;
+  color: #d4d4cf;
+  text-decoration: none;
+}
+
+nav ul li:hover {
+  background: #291901;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  color: rgb(224, 168, 95);
+}
+
+a {
+  color: rgba(10, 10, 10, 0.781);
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 1rem;
+  border-radius: 5%;
+}
+
+.contenedorMain {
+  margin-top: auto;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+}
+
+/* estilos pagina de Index*/
+.ContenVideo {
+  line-height: 0;
+}
+.ContenVideo video {
+  width: 100%;
+  height: 100vh;
+  margin: 0;
+  padding: 0%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  z-index: 0;
+}
+.ContenVideo h1 {
+  letter-spacing: -7px;
+  font-family: "Inter", sans-serif;
+  color: aliceblue;
+  font-size: 8rem;
+  font-weight: bolder;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4392156863), 1px 1px 1px rgba(0, 0, 0, 0.4392156863), -2px 2px 1px rgba(0, 0, 0, 0.4392156863), 2px -2px 1px rgba(0, 0, 0, 0.4392156863);
+  position: absolute;
+  top: 10%;
+  left: 10%;
+}
+.ContenVideo p {
+  font-size: 5rem;
+  letter-spacing: -4px;
+}
+
+.textoindex {
+  font-family: "Inter", sans-serif;
+  font-size: 1.2rem !important;
+}
+
+.tituloIndex {
+  margin-top: 0;
+  font-family: "Belleza", sans-serif;
+  color: rgba(10, 10, 10, 0.836);
+  font-weight: 600;
+  font-size: 5rem;
+}
+
+/*imagen que acompaña el texto en el index*/
+.imagenindex {
+  border-radius: 0% 1% 1% 0% !important;
+  height: 80%;
+  max-width: 100%;
+}
+
+/*parrafo al lado de la imagen del index*/
+.textoImagen p {
+  font-size: 1rem;
+  border-radius: 4px;
+  height: auto;
+  margin-bottom: 0;
+}
+
+.TituloParrafoIndex {
+  padding: 4px;
+  border-radius: 2px;
+  text-align: center;
+  height: auto;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  animation: fadeInRight;
+  animation-duration: 2s;
+}
+
+.imgParraIn {
+  padding: 4px;
+  background-color: rgba(255, 255, 255, 0.877);
+  border-radius: 2px;
+  text-align: center;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+/* estilos pagina de historia*/
+.imagenHistoria {
+  background-image: url(../img/fondo_historia.png);
+  height: 100vh;
+  margin: 0%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  position: relative;
+  z-index: 0;
+}
+.imagenHistoria .textoHistoria {
+  padding: 8% 20%;
+  text-align: center;
+}
+
+/*estilos cerveceria*/
+.contentCerveceria {
+  display: flex;
+}
+.contentCerveceria .imagenCerveceria {
+  height: auto;
+  width: auto;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4392156863);
+}
+.contentCerveceria .textcerveceria {
+  margin: 4%;
+}
+
+/* estilos pagina de cervezas*/
+.pageContentCervezas {
+  background-image: url(../img/fondo_cervezas.jpg);
+  height: 100vh;
+  margin: 0%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  font-family: "Inter", sans-serif;
+  display: flex;
+}
+
+.fst-italic {
+  font-size: 1.5rem;
+  text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4392156863);
+}
+
+.card {
+  position: unset !important;
+  align-items: center;
+}
+
+.card-text1 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.card-text2 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.card-text3 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.card-text4 {
+  padding: 5px;
+  margin-bottom: auto;
+  font-size: 1.2rem;
+}
+
+.presentaciones {
+  width: 50%;
+  height: 50%;
+}
+
+/*estilo para pagina de ubicación*/
+.contenUbicacion {
+  font-size: 5rem;
+  display: flex;
+  position: relative;
+}
+
+.contenDirecciones {
+  background-position: center;
+  align-content: center;
+  display: flex;
+  align-items: center;
+  font-family: Inter, sans-serif;
+  font-weight: bolder;
+  position: relative;
+  text-align: center;
+  width: 90%;
+  height: 70%;
+  margin: 8%;
+  padding: 1%;
+  border-radius: 0.5%;
+  background-color: rgba(83, 69, 22, 0.637);
+  color: aliceblue;
+  box-shadow: 1px 1px 10px gray;
+}
+
+.mapa-responsive {
+  align-items: center;
+  width: 50%;
+  margin-left: 9%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.maparesponsivePequeño {
+  display: none;
+}
+
+/*estilo de fomulario*/
+.formularioUbicacion {
+  margin-bottom: 5%;
+}
+.formularioUbicacion form {
+  width: 500px;
+  padding: 16px;
+  border-radius: 10px;
+  margin: auto;
+  background-color: rgba(83, 69, 22, 0.637);
+  position: relative;
+  font-family: Inter, sans-serif;
+  color: aliceblue;
+  box-shadow: 1px 1px 10px gray;
+}
+.formularioUbicacion form label {
+  width: 72px;
+  font-weight: bold;
+  display: inline-block;
+}
+.formularioUbicacion form input[type=text],
+.formularioUbicacion form input[type=email] {
+  width: 380px;
+  padding: 3px 10px;
+  border: 1px solid #f6f6f6;
+  border-radius: 3px;
+  background-color: #f6f6f6;
+  margin: 8px 0;
+  display: inline-block;
+}
+.formularioUbicacion form input[type=submit] {
+  width: 20%;
+  padding: 8px 16px;
+  margin-top: 32px;
+  border: 1px solid #000;
+  border-radius: 5px;
+  display: block;
+  color: #fff;
+  background-color: #000;
+}
+.formularioUbicacion form input[type=submit]:hover {
+  cursor: pointer;
+}
+
+/*footer, redes, copy, todo centrado*/
+footer {
+  background: rgba(83, 69, 22, 0.637);
+  padding: 0.1rem;
+  text-align: center;
+  z-index: 10;
+  box-shadow: 15px 15px 15px rgb(46, 46, 46);
+  clear: both;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer a {
+  text-decoration: none;
+  color: #d4d4cf;
+  font-size: 1rem;
+}
+
+footer a:hover {
+  color: rgb(224, 168, 95);
+}
+
+.separadorFooter {
+  border-top: 0px;
+  margin: 0;
+}
+
+/* pantalla pequeña */
+@media only screen and (max-width: 767px) {
+  .parrafoTitulo h1 {
+    font-size: 5rem;
+  }
+  .parrafoTitulo p {
+    font-size: 4rem;
+  }
+  .ContenVideo video {
+    width: 100%;
+    height: 100%;
+  }
+  header {
+    display: flex;
+  }
+  .logoSitio {
+    margin: 0 auto;
+  }
+  header nav {
+    display: none;
+  }
+  .hamburguesa {
+    display: block;
+    float: right;
+  }
+  .hamburguesa li {
+    padding: 10px;
+  }
+  .contenDirecciones h6 {
+    padding: 0%;
+    margin-top: 1%;
+    height: 50%;
+    width: 100%;
+    font-size: 0.8rem;
+  }
+  .contenDirecciones {
+    margin: 1%;
+    padding: 0%;
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    display: grid;
+    line-height: 0;
+  }
+  .contenDirecciones .mapa-responsive {
+    display: none;
+  }
+  .contenDirecciones .maparesponsivePequeño {
+    display: block;
+  }
+}
+/* Pantalla mediana */
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  #encabezado {
+    height: auto;
+  }
+  #contenido {
+    width: auto;
+  }
+  header .hamburguesa {
+    display: none;
+  }
+}
+/*Pantalla grande */
+@media (min-width: 992px) {
+  #page_content {
+    width: 90%;
+  }
+  #page_content {
+    width: 60%;
+  }
+}/*# sourceMappingURL=estilo.css.map */

@@ -5,17 +5,17 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cerveza Patriota</title>
+    <title>Cerveza Patriota La Cerveceria</title>
     <link rel="icon" href="../img/favicon_io/beer.png" type="image/png">
     <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../css/estilos.css">
+    <link rel="stylesheet" href="../scss/estilo.css">
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
 </head>
 <body>
 <header>
     <!-- se llama al logo -->
-    <img id="top" src="../img/Logo-Patriota.png" alt="logoSitio">
+    <img class="logoSitio" src="../img/Logo-Patriota.png" alt="logoSitio">
     <!-- termina logo -->
     <!-- inicio nav -->
     <nav>
@@ -28,18 +28,35 @@
         </ul>
     </nav>
     <!--termina nav-->
+    <nav class="hamburguesa" src="./img/favicon_io/android-chrome-192x192.png">
+        <input type="checkbox" id="menu">
+        <label for="menu">☰</label>
+        <ul>
+            <li><a class="link" href="../index.html">Home</a></li>
+            <li><a class="link" href="../pages/historia.html">Historia</a></li>
+            <li><a class="link" href="">Cervecería</a></li>
+            <li><a class="link" href="../pages/cervezas.html">Cervezas</a></li>
+            <li><a class="link" href="../pages/ubicacion.html">Ubicación</a></li>
+        </ul>
+      </nav>
 </header>
-<div class="page_content">
-    <main>
-        <img src="../img/Cerveceria.jpg">  
-        <div>
+<main>
+<div class="contentCerveceria">
+    
+            <div class="imagenCerveceria">
+                <img src="../img/Cerveceria.jpg">
+            </div>
+        <div class="textcerveceria">
+            <h2>La Cerveceria</h2>
             <p> La cervecería inicio de manera casera y se elaboraron las primeras cervezas en equipos de 20 Litros, obteniendo muy buenos resultados y ganando la primera medalla de oro a nivel nacional. En 2017 con apoyo de Fondo Emprender, Patriota adquirió equipos de mayor tamaño e inició la operación con una capacidad de 1.000 Litros de cerveza por mes.
             </p>    
              <p>Actualmente la cervecería ha crecido de la mano de su restaurante en Samacá y de la presencia en múltiples establecimientos en Boyacá, Bogotá y Cundinamarca, alcanzando una capacidad de producción de 20.000 Litros de cerveza por mes que se distribuyen en presentaciones de lata y botella.
             </p> 
         </div>
-    </main>
+    
 </div>
+</main>
+<hr class="separadorFooter">
     <footer>
         <!--<a href="#top"><img src="./assets/flecha_top.png" alt="ir a top"></a>
         <a href="#top">Ir al Top</a> -->
