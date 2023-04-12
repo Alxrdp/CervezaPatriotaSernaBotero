@@ -25,6 +25,9 @@ body {
 	height: 100vh;
 	overflow-x: hidden;
 }
+.logoSitio{
+	src: url(../index.html);
+}
 /*se fija el header*/
 /*header{
 	background: rgba(83, 69, 22, 0.637);
@@ -174,9 +177,7 @@ a {
 }
 .textoindex{
 	@include fontInter;
-	font-size: 1.2rem !important;
-	
-	
+	font-size: 1.2rem !important;	
 }
 .tituloIndex{
 	margin-top: 0;
@@ -219,17 +220,16 @@ a {
 }
 /* estilos pagina de historia*/
 .imagenHistoria{
-	background-image: url(../img/fondo_historia.png);
+	position: relative;
+	background-image: url(../img/fondoCervezas.jpg);
 	height: 100vh;
 	margin: 0%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include ajusteImgFondo;
 	@include fontInter;
-	position:relative;
 	z-index: 0;
 	
 	.textoHistoria{		
+		background-color: rgba(240, 248, 255, 0.507);
 		padding:8% 20%;
 		text-align: center;
 	}
@@ -237,24 +237,37 @@ a {
 /*estilos cerveceria*/
 .contentCerveceria{
 	display: flex;
+	@include fontInter;
 	.imagenCerveceria{
 		height: auto;
 		width: auto;
-		box-shadow: 5px 5px 10px #00000070,
+		box-shadow: 5px 5px 10px #00000070;
 	}
 		.textcerveceria{
-			margin: 4%;
+			h2{
+				text-align: center;
+			}
+			margin: 4% 1% 4% 1%;
+			align-items: center;
+			text-align: center;
+			
+			.imagenParrafoCerveceria{
+				position: relative;
+				border-radius: 5px;
+				width: 100%;
+				height: auto;
+				margin: 0%;
+				
+				}
 	}	
+	
 }
 /* estilos pagina de cervezas*/
-
 .cervezas{
 	background-image: url(../img/fondoCervezas.jpg);	
 	height: 100vh;
 	margin: 0%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include ajusteImgFondo;
 }
 .contenedorCervezas{
 	display: flex;
@@ -422,9 +435,7 @@ footer a:hover{
 	background-image: url(../img/vasovacio.jpg);
 	height: 100vh;
 	margin: 0%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include ajusteImgFondo;
 	background-color: #000;
 	z-index: 0;
 }
@@ -442,6 +453,10 @@ footer a:hover{
 	}
 /* pantalla pequeña */
 	@media only screen and (max-width: 767px){
+		.logoSitio{
+			margin-top:1% !important;
+			height: 70%;
+		}
 		.parrafoTitulo h1{
 		font-size: 5rem;
 		}
@@ -464,10 +479,13 @@ footer a:hover{
 		display: flex;
 		font-size: 1rem;
 		}
+		.textoImagen{
+		display: flex;
+		margin: 0 auto;
+		}
 		.logoSitio{
 		margin: 0 auto;
 		}
-		
 		header nav{
 		display:none;
 		}
@@ -478,13 +496,43 @@ footer a:hover{
 		display: block;
 		float: right;
 			li{
-			padding: 10px;
+			padding: 10px !important;
 			}
 		}
+		.textoImagen{
+		font-size: 0.5rem;
+		}
+		.imagenHistoria{
+			position: relative;
+		}
+		.textoHistoria{
+			padding: 15% 5% !important;
+			@include fontInter;
+		}
+		.contentCerveceria{
+			display: inline;
+			
+			.imagenCerveceria{
+				width: auto;
+				height: 50%;
+				transform: translateX(-50%); 
+			}
+			.textcerveceria{
+			font-size: 1rem;
+			padding-bottom: 8%;
+			text-align: center;
+			
+				h2{
+				text-align: center;				
+				}
+				.imagenParrafoCerveceria{
+				margin-bottom: 2%;				
+				}
+			}
+		}		
 		.col{
 		width: 100% !important;
-		}
-				
+		}				
 		.contenUbicacion{
 			padding-top: 10%;
 			height:100vh;
@@ -517,7 +565,7 @@ footer a:hover{
 		}
 	}
 
-/* Pantalla mediana */
+/* Pantalla mediana 
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
 		#encabezado{
 			height: auto;
@@ -535,7 +583,7 @@ footer a:hover{
 		
 		
 		
-}
+}*/
 
 /*Pantalla grande */
 	@media (min-width: 992px) {

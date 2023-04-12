@@ -14,73 +14,56 @@ header{
 .hamburguesa{
 	display: none;
 	position: fixed;
-	margin:1%;
+	margin:0.5%;
 	z-index: 10;
-	float: right;
-	color: beige;
-	
-	
-
-ul{
-  display: none;
+	color: beige;	
+	ul{
+  		display: none;
+	}
+	input:checked  ~ ul{
+		display:block;
+	}
+	input {
+		display: none;
+	}
+	label {
+		box-sizing: border-box;
+		display: inline-block;
+		border: 1px solid beige;
+		border-radius: 5px;
+		width: 40px;
+		height: 40px;
+		line-height: 38px;
+		text-align: center;
+	}
+	/* Estilo del boton cuando se pasa el mouse por encima*/
+	label:hover{
+		background: rgba(128, 128, 128, 0);
+	}
+	/* Estilo del boton cuando el menú está expandido*/
+	input:checked ~ label {
+		background: rgba(253, 253, 253, 0); 
+	.hover{
+		color: black;
+	}
+	}
+	ul{
+		margin-top:0;
+		padding: 0;
+		width: 200px;
+	}
+	li {
+		display: block;
+		margin: 0;
+		padding: 10px;
+		list-style:none;
+	}
+	/*Estilo cuando el mouse pasa encima de cada link del menu*/
+		li:hover {
+			filter: brightness(110%);
+		}
 }
-
-input:checked  ~ ul{
-  display:block;
-}
-
-input {
-  display: none;
-}
-
-label {
-  box-sizing: border-box;
-  display: inline-block;
-  border: 1px solid beige;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-}
-
-/* Estilo del boton cuando se pasa el mouse por encima*/
-label:hover{
-  background: rgba(128, 128, 128, 0);
-}
-
-/* Estilo del boton cuando el menú está expandido*/
-input:checked ~ label {
-  background: rgba(253, 253, 253, 0); 
-  .hover{
-  color: black;
-  }
-}
-
-ul{
-  margin-top:0;
-  padding: 0;
-  width: 200px;
-
-}
-
-
-li {
-  display: block;
-  margin: 0;
-  padding: 10px;
-  list-style:none;
-}
-
-/*Estilo cuando el mouse pasa encima de cada link del menu*/
-li:hover {
-  filter: brightness(110%);
-}
-}
-
 /* se crea el estilo de los botones de navegacion*/
-
-
 nav {
 	float: right;
 	font-family: 'Inter', sans-serif;
@@ -96,18 +79,13 @@ nav ul li{
 nav ul li a {
 	display: block;
 	padding: 15px;
-	color: #0f0f0f;
-	text-decoration: none;
-	
+	color: #e4e0e0ee;
+	text-decoration: none;	
 }
-
 nav ul li:hover {
-	background: #291901;
+	background: #25231fb7;
 	text-decoration: none;
 }
-
-
-
 nav ul li a:hover{
 	color:rgb(224, 168, 95);
 }
@@ -117,5 +95,5 @@ a {
 	text-decoration: none;
 	font-size: 1.2rem;
 	line-height: 1rem;
-	border-radius: 5%;	
+	border-radius: 5%;
 }

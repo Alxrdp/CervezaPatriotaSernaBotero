@@ -9,13 +9,13 @@ footer {
 }
 footer a{
 	text-decoration: none;
-	color: #7a7a7a;
-	font-size: 1rem;
-	
+	color: #ffffffb2;
+	font-size: 1.2rem;
+	text-shadow: -1px -1px 1px #2b2a2a70, 1px 1px 1px #2b2a2a70, -1px 1px 1px #2b2a2a70, 1px -1px 1px #2b2a2a70;
 }
 footer a:hover{
-	color: rgb(31, 30, 30);
-	text-shadow: 1px 1px 5px  rgb(46, 46, 46);
+	color: rgb(241, 241, 241);
+	text-shadow: 1px 1px 5px  rgba(46, 46, 46, 0.486);
 }
 
 .separadorFooter{
