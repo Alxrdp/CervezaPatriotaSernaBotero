@@ -5,138 +5,42 @@
   box-sizing: border-box;
 }
 
-/*se fija el header*/
-header {
-  background: rgba(53, 53, 53, 0.637);
-  margin-top: 0;
-  width: 100%;
-  height: 6%;
-  position: fixed;
-  display: inline-block;
-  margin-bottom: 10px;
-  z-index: 10;
-  box-shadow: 3px 3px 8px gray;
-}
-
-.hamburguesa {
-  display: none;
-  position: fixed;
-  margin: 1%;
-  z-index: 10;
-  float: right;
-  color: beige;
-  /* Estilo del boton cuando se pasa el mouse por encima*/
-  /* Estilo del boton cuando el menú está expandido*/
-  /*Estilo cuando el mouse pasa encima de cada link del menu*/
-}
-.hamburguesa ul {
-  display: none;
-}
-.hamburguesa input:checked ~ ul {
-  display: block;
-}
-.hamburguesa input {
-  display: none;
-}
-.hamburguesa label {
-  box-sizing: border-box;
-  display: inline-block;
-  border: 1px solid beige;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-}
-.hamburguesa label:hover {
-  background: rgba(128, 128, 128, 0);
-}
-.hamburguesa input:checked ~ label {
-  background: rgba(253, 253, 253, 0);
-}
-.hamburguesa input:checked ~ label .hover {
-  color: black;
-}
-.hamburguesa ul {
-  margin-top: 0;
-  padding: 0;
-  width: 200px;
-}
-.hamburguesa li {
-  display: block;
-  margin: 0;
-  padding: 10px;
-  list-style: none;
-}
-.hamburguesa li:hover {
-  filter: brightness(110%);
-}
-
-/* se crea el estilo de los botones de navegacion*/
-nav {
-  float: right;
-  font-family: "Inter", sans-serif;
-}
-
-nav ul {
-  list-style: none;
-}
-
-nav ul li {
-  float: left;
-  font-family: "open sans", sans-serif;
-  font-size: 1rem;
-}
-
-nav ul li a {
-  display: block;
-  padding: 15px;
-  color: #0f0f0f;
-  text-decoration: none;
-}
-
-nav ul li:hover {
-  background: #291901;
-  text-decoration: none;
-}
-
-nav ul li a:hover {
-  color: rgb(224, 168, 95);
-}
-
-a {
-  color: rgba(10, 10, 10, 0.781);
-  font-weight: 600;
-  text-decoration: none;
-  font-size: 1.2rem;
-  line-height: 1rem;
-  border-radius: 5%;
-}
-
-/*footer, redes, copy, todo centrado*/
+/*footer, redes, copy*/
 footer {
-  padding: 0.1rem;
-  text-align: center;
   z-index: 10;
   position: fixed;
   bottom: 0;
-  width: 100%;
+  right: 0;
+}
+footer ul {
+  list-style: none;
+}
+footer ul li a {
+  display: inline-block;
+  color: #fff;
+  padding: 10px 15px;
+}
+footer .fa-instagram:before {
+  color: #a722ac !important;
+}
+footer .fa-facebook:before {
+  color: #2422ac !important;
+}
+footer .fa-twitter:before {
+  color: #2172dd !important;
+}
+footer .contenedorRedes ul li a:hover {
+  color: #00abf0;
+  background: rgba(22, 21, 21, 0.3215686275);
+  padding: 10px 10px;
+  border-radius: 2px;
+  margin-right: 0%;
 }
 
-footer a {
-  text-decoration: none;
-  color: #7a7a7a;
-  font-size: 1rem;
-}
-
-footer a:hover {
-  color: rgb(31, 30, 30);
-  text-shadow: 1px 1px 5px rgb(46, 46, 46);
-}
-
-.separadorFooter {
-  border-top: 0px;
-  margin: 0;
+.copy a {
+  text-decoration: none !important;
+  color: #2422ac;
+  align-self: center !important;
 }
 
 /* fuente descargada en el pc */
@@ -158,119 +62,11 @@ body {
   overflow-x: hidden;
 }
 
-/*se fija el header*/
-/*header{
-	background: rgba(83, 69, 22, 0.637);
-	margin-top: 0;
-	width: 100%;
-	height: 6%;
-	position: fixed;
-	display: inline-block;
-	margin-bottom: 10px;
-	z-index: 10;
-	box-shadow: 3px 3px 8px gray;
+.parrafoTitulo {
+  font-family: "Inter", sans-serif;
+  font-weight: lighter;
 }
 
-.hamburguesa{
-	display: none;
-	position: fixed;
-	margin:1%;
-	z-index: 10;
-	float: right;
-
-
-ul{
-  display: none;
-}
-
-input:checked  ~ ul{
-  display:block;
-}
-
-input {
-  display: none;
-}
-
-label {
-  box-sizing: border-box;
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-}
-
-/* Estilo del boton cuando se pasa el mouse por encima*/
-/*label:hover{
-  background: rgba(128, 128, 128, 0);
-}
-
-/* Estilo del boton cuando el menú está expandido
-input:checked ~ label {
-  background: rgba(12, 3, 3, 0.205); 
-}
-
-ul{
-  margin-top:0;
-  padding: 0;
-  width: 200px;
-
-}
-
-
-li {
-  display: block;
-  margin: 0;
-  padding: 10px;
-  list-style:none;
-}
-/*Estilo cuando el mouse pasa encima de cada link del menu*/
-/*li:hover {
-  filter: brightness(110%);
-}
-}
-
-/* se crea el estilo de los botones de navegacion*/
-/*nav {
-	float: right;
-	font-family: 'Inter', sans-serif;
-}
-nav ul {
-	list-style: none;
-}
-nav ul li{
-	float: left;
-	font-family: 'open sans', sans-serif;
-	font-size: 1rem;
-}
-nav ul li a {
-	display: block;
-	padding: 15px;
-	color: #d4d4cf;
-	text-decoration: none;
-
-}
-
-nav ul li:hover {
-	background: #291901;
-	text-decoration: none;
-}
-
-
-
-nav ul li a:hover{
-	color:rgb(224, 168, 95);
-}
-a {
-	color: rgba(10, 10, 10, 0.781);
-	font-weight: 600;
-	text-decoration: none;
-	font-size: 1.2rem;
-	line-height: 1rem;
-	border-radius: 5%;	
-}*/
 .contenedorMain {
   margin-top: auto;
   height: auto;
@@ -279,37 +75,42 @@ a {
 }
 
 /* estilos pagina de Index*/
-.ContenVideo {
-  line-height: 0;
-}
-.ContenVideo video {
+.contenVideo video {
   width: 100%;
   height: 100vh;
   margin: 0;
-  padding: 0%;
+  padding: 0;
   -o-object-fit: cover;
      object-fit: cover;
   z-index: 0;
+  overflow: hidden;
+  display: block;
 }
-.ContenVideo h1 {
-  letter-spacing: -7px;
+.contenVideo h1 {
   font-family: "Inter", sans-serif;
-  color: aliceblue;
-  font-size: 8rem;
-  font-weight: bolder;
+  color: rgb(248, 250, 252);
+  font-size: 6rem;
   text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4392156863), 1px 1px 1px rgba(0, 0, 0, 0.4392156863), -2px 2px 1px rgba(0, 0, 0, 0.4392156863), 2px -2px 1px rgba(0, 0, 0, 0.4392156863);
   position: absolute;
   top: 10%;
-  left: 10%;
+  left: 5%;
 }
-.ContenVideo p {
-  font-size: 5rem;
-  letter-spacing: -4px;
+.contenVideo h2 {
+  font-family: "Inter", sans-serif;
+  color: rgb(248, 250, 252);
+  font-size: 6rem;
+  font-weight: bolder;
+  text-shadow: -1px -1px 1px rgba(0, 0, 0, 0.4392156863), 1px 1px 1px rgba(0, 0, 0, 0.4392156863), -2px 2px 1px rgba(0, 0, 0, 0.4392156863), 2px -2px 1px rgba(0, 0, 0, 0.4392156863);
+  position: absolute;
+  top: 30%;
+  left: 5%;
 }
 
-.textoindex {
+.textHist {
   font-family: "Inter", sans-serif;
   font-size: 1.2rem !important;
+  margin: 2%;
+  padding: 2%;
 }
 
 .tituloIndex {
@@ -321,13 +122,16 @@ a {
 }
 
 /*imagen que acompaña el texto en el index*/
-.imagenindex {
+.imgHist {
   border-radius: 0% 1% 1% 0% !important;
   height: 80%;
   max-width: 100%;
 }
 
 /*parrafo al lado de la imagen del index*/
+.textoImagen {
+  display: flex;
+}
 .textoImagen p {
   font-size: 1rem;
   border-radius: 4px;
@@ -357,24 +161,26 @@ a {
 
 /* estilos pagina de historia*/
 .imagenHistoria {
-  background-image: url(../img/fondo_historia.png);
+  position: relative;
+  background-image: url(../img/fondoCervezas.jpg);
   height: 100vh;
   margin: 0%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   font-family: "Inter", sans-serif;
-  position: relative;
   z-index: 0;
 }
 .imagenHistoria .textoHistoria {
-  padding: 8% 20%;
+  background-color: rgba(240, 248, 255, 0.507);
+  padding: 6% 18%;
   text-align: center;
 }
 
 /*estilos cerveceria*/
 .contentCerveceria {
   display: flex;
+  font-family: "Inter", sans-serif;
 }
 .contentCerveceria .imagenCerveceria {
   height: auto;
@@ -382,7 +188,19 @@ a {
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4392156863);
 }
 .contentCerveceria .textcerveceria {
-  margin: 4%;
+  margin: 4% 1% 4% 1%;
+  align-items: center;
+  text-align: center;
+}
+.contentCerveceria .textcerveceria h2 {
+  text-align: center;
+}
+.contentCerveceria .textcerveceria .imagenParrafoCerveceria {
+  position: relative;
+  border-radius: 5px;
+  width: 100%;
+  height: auto;
+  margin: 0%;
 }
 
 /* estilos pagina de cervezas*/
@@ -393,6 +211,16 @@ a {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.imagenCarrusel {
+  width: 50vh;
+  margin: 0 auto;
+  margin-top: 4%;
+}
+
+.textCarrusel {
+  font-family: "Inter", sans-serif;
 }
 
 .contenedorCervezas {
@@ -446,10 +274,10 @@ a {
 }
 
 /*estilo para pagina de ubicación*/
-.ubicacion {
-  display: flex;
+.Ubicacion {
   align-items: center;
   justify-content: center;
+  background-color: rgba(65, 63, 63, 0.6901960784);
 }
 
 .list-group-item {
@@ -533,31 +361,6 @@ a {
   cursor: pointer;
 }
 
-/*footer, redes, copy, todo centrado*/
-/*footer {
-    padding: 0.1rem;	
-	text-align: center;
-    z-index: 10;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-
-}
-footer a{
-	text-decoration: none;
-	color: #7a7a7a;
-	font-size: 1rem;
-
-}
-footer a:hover{
-	color: rgb(31, 30, 30);
-	text-shadow: 1px 1px 5px  rgb(46, 46, 46);
-}
-
-.separadorFooter{
-	border-top: 0px;
-	margin: 0;
-}*/
 .fondoError {
   background-image: url(../img/vasovacio.jpg);
   height: 100vh;
@@ -570,6 +373,7 @@ footer a:hover{
 }
 
 .parrafoError {
+  position: fixed;
   margin-left: 72%;
   font-family: "Inter", sans-serif;
   z-index: 5;
@@ -586,38 +390,62 @@ footer a:hover{
   .parrafoTitulo h1 {
     font-size: 5rem;
   }
-  .parrafoTitulo p {
-    font-size: 4rem;
-  }
   .parrafoError {
     font-size: 0.5rem !important;
     margin-top: 50%;
     margin-left: 50%;
     margin-right: 2%;
   }
-  .ContenVideo video {
+  .contenVideo video {
     width: auto;
-    transform: translateX(-50%);
+    transform: translateX(-55%);
+    position: fixed;
   }
-  header {
-    display: flex;
-    font-size: 1rem;
+  .contenVideo h1 {
+    font-size: 6rem;
   }
-  .logoSitio {
+  .contenVideo h2 {
+    font-size: 5rem;
+    top: 40%;
+  }
+  .textoImagen {
     margin: 0 auto;
+    font-size: 0.5rem;
+    display: flex;
   }
-  header nav {
+  .imagenHistoria {
+    position: relative;
+  }
+  .textoHistoria {
+    padding: 10% 5% !important;
+    font-family: "Inter", sans-serif;
+  }
+  .textHist {
+    font-size: 1rem !important;
+    margin: 2%;
+    padding: 1%;
+  }
+  .imgHist {
     display: none;
   }
-  nav ul li a {
-    color: beige;
+  .contentCerveceria {
+    display: inline;
   }
-  .hamburguesa {
-    display: block;
-    float: right;
+  .contentCerveceria .imagenCerveceria {
+    width: auto;
+    height: 50%;
+    transform: translateX(-50%);
   }
-  .hamburguesa li {
-    padding: 10px;
+  .contentCerveceria .textcerveceria {
+    font-size: 1rem;
+    padding-bottom: 8%;
+    text-align: center;
+  }
+  .contentCerveceria .textcerveceria h2 {
+    text-align: center;
+  }
+  .contentCerveceria .textcerveceria .imagenParrafoCerveceria {
+    margin-bottom: 2%;
   }
   .col {
     width: 100% !important;
@@ -649,18 +477,25 @@ footer a:hover{
     margin: 10%;
   }
 }
-/* Pantalla mediana */
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-  #encabezado {
-    height: auto;
-  }
-  #contenido {
-    width: auto;
-  }
-  header .hamburguesa {
-    display: none;
-  }
-}
+/* Pantalla mediana 
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+		#encabezado{
+			height: auto;
+		}
+		#contenido{
+			width: auto;
+
+		}
+
+
+		header .hamburguesa{
+			display:none;
+		}
+
+
+
+
+}*/
 /*Pantalla grande */
 @media (min-width: 992px) {
   #page_content {

@@ -1,7 +1,6 @@
 
 @import "_reset.scss";
 @import "_variables.scss";
-@import "_header.scss";
 @import "_footer.scss";
 @import "_mixins.scss";
 
@@ -25,119 +24,11 @@ body {
 	height: 100vh;
 	overflow-x: hidden;
 }
-/*se fija el header*/
-/*header{
-	background: rgba(83, 69, 22, 0.637);
-	margin-top: 0;
-	width: 100%;
-	height: 6%;
-	position: fixed;
-	display: inline-block;
-	margin-bottom: 10px;
-	z-index: 10;
-	box-shadow: 3px 3px 8px gray;
-}
+	.parrafoTitulo{
+		@include fontInter;
+		font-weight: lighter;
+	}
 
-.hamburguesa{
-	display: none;
-	position: fixed;
-	margin:1%;
-	z-index: 10;
-	float: right;
-	
-
-ul{
-  display: none;
-}
-
-input:checked  ~ ul{
-  display:block;
-}
-
-input {
-  display: none;
-}
-
-label {
-  box-sizing: border-box;
-  display: inline-block;
-  border: 1px solid black;
-  border-radius: 5px;
-  width: 30px;
-  height: 30px;
-  line-height: 30px;
-  text-align: center;
-}
-
-/* Estilo del boton cuando se pasa el mouse por encima*/
-/*label:hover{
-  background: rgba(128, 128, 128, 0);
-}
-
-/* Estilo del boton cuando el menú está expandido
-input:checked ~ label {
-  background: rgba(12, 3, 3, 0.205); 
-}
-
-ul{
-  margin-top:0;
-  padding: 0;
-  width: 200px;
-
-}
-
-
-li {
-  display: block;
-  margin: 0;
-  padding: 10px;
-  list-style:none;
-}
-/*Estilo cuando el mouse pasa encima de cada link del menu*/
-/*li:hover {
-  filter: brightness(110%);
-}
-}
-
-/* se crea el estilo de los botones de navegacion*/
-/*nav {
-	float: right;
-	font-family: 'Inter', sans-serif;
-}
-nav ul {
-	list-style: none;
-}
-nav ul li{
-	float: left;
-	font-family: 'open sans', sans-serif;
-	font-size: 1rem;
-}
-nav ul li a {
-	display: block;
-	padding: 15px;
-	color: #d4d4cf;
-	text-decoration: none;
-	
-}
-
-nav ul li:hover {
-	background: #291901;
-	text-decoration: none;
-}
-
-
-
-nav ul li a:hover{
-	color:rgb(224, 168, 95);
-}
-a {
-	color: rgba(10, 10, 10, 0.781);
-	font-weight: 600;
-	text-decoration: none;
-	font-size: 1.2rem;
-	line-height: 1rem;
-	border-radius: 5%;	
-}*/
 .contenedorMain{
 	margin-top: auto;
 	height: auto;
@@ -145,38 +36,42 @@ a {
 	overflow: hidden;
 }
 /* estilos pagina de Index*/
-.ContenVideo{
+.contenVideo{
 	video{
 		width: 100%;
 		height: 100vh;
 		margin: 0;
-		padding: 0%;
+		padding: 0;
 		object-fit: cover;
 		z-index: 0;
+		overflow: hidden;
+		display:block
 	}
-		h1{
-			letter-spacing: -7px;
-			@include fontInter;
-			color: aliceblue;
-			font-size: 8rem;
-			font-weight: bolder;
-			text-shadow: -1px -1px 1px #00000070, 1px 1px 1px #00000070, -2px 2px 1px #00000070, 2px -2px 1px #00000070;
-			position: absolute;
-            top: 10%;
-            left: 10%;
-		}
-		p{
-			font-size: 5rem;
-			letter-spacing: -4px;
-			
-		}
-		line-height:0;
+	h1{		
+		@include fontInter;
+		color: rgb(248, 250, 252);
+		font-size: 6rem;
+		text-shadow: -1px -1px 1px #00000070, 1px 1px 1px #00000070, -2px 2px 1px #00000070, 2px -2px 1px #00000070;
+		position: absolute;
+        top: 10%;
+        left: 5%;
+	}
+	h2{
+		@include fontInter;
+		color: rgb(248, 250, 252);
+		font-size: 6rem;
+		font-weight: bolder;
+		text-shadow: -1px -1px 1px #00000070, 1px 1px 1px #00000070, -2px 2px 1px #00000070, 2px -2px 1px #00000070;
+		position: absolute;
+        top: 30%;
+        left: 5%;
+	}
 }
-.textoindex{
+.textHist{
 	@include fontInter;
 	font-size: 1.2rem !important;
-	
-	
+	margin: 2%;
+	padding: 2%;
 }
 .tituloIndex{
 	margin-top: 0;
@@ -187,17 +82,20 @@ a {
 	
 }
 /*imagen que acompaña el texto en el index*/
-.imagenindex{
+.imgHist{
 	border-radius: 0% 1% 1% 0% !important;
 	height: 80%;		
 	max-width: 100%;
 }
 /*parrafo al lado de la imagen del index*/
-.textoImagen p {
-	font-size: 1rem;	
-	border-radius:4px;
-	height: auto;
-	margin-bottom: 0;
+.textoImagen{ 
+	display: flex;
+		p {
+		font-size: 1rem;	
+		border-radius:4px;
+		height: auto;
+		margin-bottom: 0;
+		}
 }
 .TituloParrafoIndex{
 	padding: 4px;
@@ -219,43 +117,66 @@ a {
 }
 /* estilos pagina de historia*/
 .imagenHistoria{
-	background-image: url(../img/fondo_historia.png);
+	position: relative;
+	background-image: url(../img/fondoCervezas.jpg);
 	height: 100vh;
 	margin: 0%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include ajusteImgFondo;
 	@include fontInter;
-	position:relative;
 	z-index: 0;
 	
 	.textoHistoria{		
-		padding:8% 20%;
+		background-color: rgba(240, 248, 255, 0.507);
+		padding:6% 18%;
 		text-align: center;
 	}
 }
 /*estilos cerveceria*/
 .contentCerveceria{
 	display: flex;
+	@include fontInter;
 	.imagenCerveceria{
 		height: auto;
 		width: auto;
-		box-shadow: 5px 5px 10px #00000070,
+		box-shadow: 5px 5px 10px #00000070;
 	}
 		.textcerveceria{
-			margin: 4%;
+			h2{
+				text-align: center;
+			}
+			margin: 4% 1% 4% 1%;
+			align-items: center;
+			text-align: center;
+			
+			.imagenParrafoCerveceria{
+				position: relative;
+				border-radius: 5px;
+				width: 100%;
+				height: auto;
+				margin: 0%;
+				
+				}
 	}	
+	
 }
 /* estilos pagina de cervezas*/
-
 .cervezas{
 	background-image: url(../img/fondoCervezas.jpg);	
 	height: 100vh;
 	margin: 0%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include ajusteImgFondo;
 }
+		
+	.imagenCarrusel{
+		width: 50vh;
+		margin:0 auto;
+		margin-top: 4%;
+	}
+		
+	.textCarrusel{
+		@include fontInter;		
+	}
+
 .contenedorCervezas{
 	display: flex;
 	@include fontInter;
@@ -302,10 +223,10 @@ a {
 	height: 50%;	
 }
 /*estilo para pagina de ubicación*/
-.ubicacion{	
-	display: flex;
+.Ubicacion{	
 	align-items: center;	
 	justify-content: center;
+	background-color: #413f3fb0;
 	
 }
 .list-group-item{
@@ -388,47 +309,18 @@ a {
 	
 	form input[type="submit"]:hover{
 		cursor:pointer;
-	}
-	
-	
+	}	
 }
-/*footer, redes, copy, todo centrado*/
-/*footer {
-    padding: 0.1rem;	
-	text-align: center;
-    z-index: 10;
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    
-}
-footer a{
-	text-decoration: none;
-	color: #7a7a7a;
-	font-size: 1rem;
-	
-}
-footer a:hover{
-	color: rgb(31, 30, 30);
-	text-shadow: 1px 1px 5px  rgb(46, 46, 46);
-}
-
-.separadorFooter{
-	border-top: 0px;
-	margin: 0;
-}*/
-
 .fondoError{
 	background-image: url(../img/vasovacio.jpg);
 	height: 100vh;
 	margin: 0%;
-	background-position: center;
-	background-repeat: no-repeat;
-	background-size: cover;
+	@include ajusteImgFondo;
 	background-color: #000;
 	z-index: 0;
 }
 .parrafoError{
+position: fixed;
 	margin-left: 72%;
 	@include fontInter;
 	z-index:5;
@@ -441,12 +333,9 @@ footer a:hover{
 	
 	}
 /* pantalla pequeña */
-	@media only screen and (max-width: 767px){
+	@media only screen and (max-width: 767px){	
 		.parrafoTitulo h1{
 		font-size: 5rem;
-		}
-		.parrafoTitulo p{
-			font-size: 4rem;
 		}
 		.parrafoError{
 			font-size: 0.5rem !important;
@@ -454,43 +343,68 @@ footer a:hover{
 			margin-left: 50%;
 			margin-right: 2%;
 		}
-		.ContenVideo{
+		.contenVideo{
 			video{
 				width: auto;
+				transform: translateX(-55%); 
+				position: fixed;
+			}
+			h1{
+				font-size: 6rem;
+			}
+			h2{
+				font-size: 5rem;
+				top: 40%;
+			}
+		}
+		.textoImagen{
+		margin: 0 auto;		
+		font-size: 0.5rem;		
+		display: flex;
+		}		
+		.imagenHistoria{
+			position: relative;
+		}
+		.textoHistoria{
+			padding: 10% 5% !important;
+			@include fontInter;
+		}
+		.textHist{
+			font-size: 1rem !important;
+			margin: 2%;
+			padding: 1%;
+		}
+		.imgHist{
+			display: none;
+		}
+		.contentCerveceria{
+			display: inline;
+			
+			.imagenCerveceria{
+				width: auto;
+				height: 50%;
 				transform: translateX(-50%); 
 			}
-		}
-		header{
-		display: flex;
-		font-size: 1rem;
-		}
-		.logoSitio{
-		margin: 0 auto;
-		}
-		
-		header nav{
-		display:none;
-		}
-		nav ul li a{
-		color: beige;
-		}
-		.hamburguesa{
-		display: block;
-		float: right;
-			li{
-			padding: 10px;
+			.textcerveceria{
+			font-size: 1rem;
+			padding-bottom: 8%;
+			text-align: center;
+			
+				h2{
+				text-align: center;				
+				}
+				.imagenParrafoCerveceria{
+				margin-bottom: 2%;				
+				}
 			}
-		}
+		}		
 		.col{
 		width: 100% !important;
-		}
-				
+		}				
 		.contenUbicacion{
 			padding-top: 10%;
 			height:100vh;
-			margin-bottom: 10%;
-			
-			
+			margin-bottom: 10%;			
 		}
 		.contenDirecciones{
 			margin: 2%;
@@ -501,8 +415,7 @@ footer a:hover{
 			display:grid;
 			line-height:0.8;
 			position: relative;
-			font-weight: 1rem;
-			
+			font-weight: 1rem;			
 		
 		.mapa-responsive{
 		display: none;
@@ -516,8 +429,8 @@ footer a:hover{
 		}
 		}
 	}
-
-/* Pantalla mediana */
+	
+/* Pantalla mediana 
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
 		#encabezado{
 			height: auto;
@@ -535,7 +448,7 @@ footer a:hover{
 		
 		
 		
-}
+}*/
 
 /*Pantalla grande */
 	@media (min-width: 992px) {

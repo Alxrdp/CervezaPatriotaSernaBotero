@@ -7,69 +7,84 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cerveza Patriota La Cerveceria</title>
     <link rel="icon" href="../img/favicon_io/beer.png" type="image/png">
-    <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="../scss/estilo.css">
+    <script src="https://kit.fontawesome.com/acaf011dda.js" crossorigin="anonymous"></script>    
     <link rel="stylesheet" href="../css/all.min.css">
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../scss/estilo.css">
 </head>
 <body>
 <header>
     <!-- se llama al logo -->
-    <img class="logoSitio" src="../img/Logo-Patriota.png" alt="logoSitio">
+    <!--<a href="../index.html">
+        <img class="logoSitio" src="../img/Logo-Patriota.png" alt="logoSitio">
+    </a>
     <!-- termina logo -->
     <!-- inicio nav -->
-    <nav>
-        <ul>
-            <li><a class="link" href="../index.html">Home</a></li>
-            <li><a class="link" href="../pages/historia.html">Historia</a></li>
-            <li><a class="link" href="">Cervecería</a></li>
-            <li><a class="link" href="../pages/cervezas.html">Cervezas</a></li>
-            <li><a class="link" href="../pages/ubicacion.html">Ubicación</a></li>
-        </ul>
-    </nav>
-    <!--termina nav-->
-    <nav class="hamburguesa" src="./img/favicon_io/android-chrome-192x192.png">
-        <input type="checkbox" id="menu">
-        <label for="menu">☰</label>
-        <ul>
-            <li><a class="link" href="../index.html">Home</a></li>
-            <li><a class="link" href="../pages/historia.html">Historia</a></li>
-            <li><a class="link" href="">Cervecería</a></li>
-            <li><a class="link" href="../pages/cervezas.html">Cervezas</a></li>
-            <li><a class="link" href="../pages/ubicacion.html">Ubicación</a></li>
-        </ul>
+    <nav class="navbar navbar-dark bg-dark fixed-top opacity-75">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="../index.html">
+            <img src="../img/Logo-Patriota.png" alt="Bootstrap" width="100%" height="100%">
+        </a>
+    <a class="navbar-brand"></a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+            <div class="offcanvas-body">
+              <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+                <li class="nav-item">
+                  <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/historia.html">Historia</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">Cervecería</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/cervezas.html">Cervezas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="../pages/ubicacion.html">Ubicación</a>
+                </li>
+              </ul>                  
+            </div>
+          </div>
+        </div>
       </nav>
 </header>
 <main>
-<div class="contentCerveceria">
-    
-            <div class="imagenCerveceria">
-                <img src="../img/Cerveceria.jpg">
-            </div>
-        <div class="textcerveceria">
-            <h2>La Cerveceria</h2>
-            <p> La cervecería inicio de manera casera y se elaboraron las primeras cervezas en equipos de 20 Litros, obteniendo muy buenos resultados y ganando la primera medalla de oro a nivel nacional. En 2017 con apoyo de Fondo Emprender, Patriota adquirió equipos de mayor tamaño e inició la operación con una capacidad de 1.000 Litros de cerveza por mes.
-            </p>    
-             <p>Actualmente la cervecería ha crecido de la mano de su restaurante en Samacá y de la presencia en múltiples establecimientos en Boyacá, Bogotá y Cundinamarca, alcanzando una capacidad de producción de 20.000 Litros de cerveza por mes que se distribuyen en presentaciones de lata y botella.
-            </p> 
+        <div class="contentCerveceria">    
+                    <div class="imagenCerveceria">
+                            <img src="../img/Cerveceria.jpg">                
+                    </div> 
+                    <div class="textcerveceria">
+                        <h2>La Cerveceria</h2>
+                        <p> La cervecería inicio de manera casera y se elaboraron las primeras cervezas en equipos de 20 Litros, obteniendo muy buenos resultados y <span style="font-weight: bolder">ganando la primera medalla de oro a nivel nacional</span>. En 2017 con apoyo de Fondo Emprender, Patriota adquirió equipos de mayor tamaño e inició la operación con una capacidad de 1.000 Litros de cerveza por mes.
+                        </p>    
+                        <p>Actualmente la cervecería ha crecido de la mano de su restaurante en Samacá y de la presencia en múltiples establecimientos en Boyacá, Bogotá y Cundinamarca, <span style="font-weight: bolder">alcanzando una capacidad de producción de 20.000 Litros de cerveza por mes</span> que se distribuyen en presentaciones de lata y botella.
+                        </p> 
+                            <img class="imagenParrafoCerveceria"  src="../img/Caja_de_lujo.jpg" alt="imagen para acompañar texto de la cerveceria">
+                            </img>
+                    </div>    
         </div>
-    
-</div>
 </main>
-<hr class="separadorFooter">
-    <footer>
-        <!--<a href="#top"><img src="./assets/flecha_top.png" alt="ir a top"></a>
-        <a href="#top">Ir al Top</a> -->
-         <a class="contenedorRedes">
-            <div>
-                <a href ="./error404.html">Copyright © 2023</a>
-            </div>
-            <a href="https://www.instagram.com/" target="_blank"<i class="fab fa-instagram"></i></a>
-            <a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook"></i></a>
-            <a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter"></i></a>
-         </a>
-     
-    </footer>
-    
+      <footer>
+              <div class="contenedorRedes">                    
+                <ul>
+                <li><a href="https://www.instagram.com/" target="_blank"><i class="fab fa-instagram fa-bounce fa-xl"></i></a></li>
+                <li><a href="https://es-la.facebook.com/" target="_blank"><i class="fab fa-facebook fa-bounce fa-xl"></i></a></li>
+                <li><a href="https://twitter.com/?lang=es" target="_blank"><i class="fab fa-twitter fa-bounce fa-xl"></i></a></li>
+                </ul>
+            </div> 
+              <div>
+                  <a href ="../pages/error404.html" style="font-weight:lighter"; >Copyright © 2023</a>
+              </div>     
+    </footer>   
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script> 
 </body>
 </html>
