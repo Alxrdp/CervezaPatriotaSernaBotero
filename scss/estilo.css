@@ -39,8 +39,18 @@ footer .contenedorRedes ul li a:hover {
 
 .copy a {
   text-decoration: none !important;
-  color: #2422ac;
+  color: #333333;
   align-self: center !important;
+}
+
+header .navbar {
+  font-family: "Inter", sans-serif;
+}
+header .navbar h5 {
+  font-size: 2rem !important;
+}
+header .navbar .nav-link {
+  font-size: 1.5rem !important;
 }
 
 /* fuente descargada en el pc */
@@ -65,13 +75,6 @@ body {
 .parrafoTitulo {
   font-family: "Inter", sans-serif;
   font-weight: lighter;
-}
-
-.contenedorMain {
-  margin-top: auto;
-  height: auto;
-  width: auto;
-  overflow: hidden;
 }
 
 /* estilos pagina de Index*/
@@ -113,12 +116,12 @@ body {
   padding: 2%;
 }
 
-.tituloIndex {
-  margin-top: 0;
-  font-family: "Belleza", sans-serif;
-  color: rgba(10, 10, 10, 0.836);
-  font-weight: 600;
-  font-size: 5rem;
+.contenedorMain {
+  margin-top: auto;
+  height: auto;
+  width: auto;
+  overflow: hidden;
+  background-color: rgba(255, 255, 255, 0.788);
 }
 
 /*imagen que acompaña el texto en el index*/
@@ -139,7 +142,7 @@ body {
   margin-bottom: 0;
 }
 
-.TituloParrafoIndex {
+.TituloParHist {
   padding: 4px;
   border-radius: 2px;
   text-align: center;
@@ -150,9 +153,8 @@ body {
   animation-duration: 2s;
 }
 
-.imgParraIn {
+.imgParraHist {
   padding: 4px;
-  background-color: rgba(255, 255, 255, 0.877);
   border-radius: 2px;
   text-align: center;
   margin-top: 10px;
@@ -163,7 +165,6 @@ body {
 .imagenHistoria {
   position: relative;
   background-image: url(../img/fondoCervezas.jpg);
-  height: 100vh;
   margin: 0%;
   background-position: center;
   background-repeat: no-repeat;
@@ -172,35 +173,47 @@ body {
   z-index: 0;
 }
 .imagenHistoria .textoHistoria {
-  background-color: rgba(240, 248, 255, 0.507);
+  background-color: rgba(255, 255, 255, 0.788);
   padding: 6% 18%;
   text-align: center;
+}
+.imagenHistoria .textoHistoria .recuadro {
+  background-color: #cfb22d;
+  margin: 0 auto;
+  padding: 5px;
+  display: inline;
 }
 
 /*estilos cerveceria*/
 .contentCerveceria {
-  display: flex;
   font-family: "Inter", sans-serif;
+  margin-top: 5%;
 }
 .contentCerveceria .imagenCerveceria {
-  height: auto;
-  width: auto;
+  margin: 0;
+  padding: 0%;
+  height: 100%;
+  width: 100%;
   box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4392156863);
 }
 .contentCerveceria .textcerveceria {
-  margin: 4% 1% 4% 1%;
+  display: block;
+  margin: 4% 6% 4% 6%;
   align-items: center;
-  text-align: center;
+  text-align: left;
 }
-.contentCerveceria .textcerveceria h2 {
-  text-align: center;
+.contentCerveceria .textcerveceria .recuadro {
+  background-color: #cfb22d;
+  margin: 0 auto;
+  padding: 5px;
+  display: inline;
 }
 .contentCerveceria .textcerveceria .imagenParrafoCerveceria {
   position: relative;
   border-radius: 5px;
-  width: 100%;
+  width: auto;
   height: auto;
-  margin: 0%;
+  margin: 1%;
 }
 
 /* estilos pagina de cervezas*/
@@ -212,113 +225,90 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-
-.imagenCarrusel {
-  width: 50vh;
+.cervezas .imagenCarrusel {
+  width: 20%;
   margin: 0 auto;
+  margin-top: 2%;
+}
+.cervezas .textCarrusel {
+  font-family: "Inter", sans-serif;
+}
+.cervezas .carousel-inner {
+  background-color: rgba(0, 0, 0, 0.431372549);
+}
+.cervezas .carousel-item {
+  height: 100vh;
   margin-top: 4%;
 }
 
-.textCarrusel {
-  font-family: "Inter", sans-serif;
-}
+/*.presentaciones{
+	display: flex;	
+	justify-content: space-between;
 
-.contenedorCervezas {
-  display: flex;
-  font-family: "Inter", sans-serif;
-  font-weight: normal;
-  position: relative;
-  font-size: 1.5rem;
-}
-.contenedorCervezas .col {
-  width: 50%;
-}
+		.itemPresen{
+		justify-content: space-between;
+		background-color: transparent;
+		border-width: 0;
+		width: 150px;
+		height: 300px;
+		img{
+			background-color: #fff2f2;
+			width: 100%;
+		}		
+			img hover{
+				h3{
+					display:block;
+				}
+			}
+		}
 
-.fst-italic {
-  font-size: 1.5rem;
-  text-shadow: 5px 5px 10px rgba(243, 243, 243, 0.4392156863);
-}
 
-.card {
-  align-items: center;
-  width: 100%;
-  background-color: rgba(240, 240, 240, 0.2196078431) !important;
-}
-
-.card-text1 {
-  padding: 5px;
-  margin-bottom: auto;
-}
-
-.card-text2 {
-  padding: 5px;
-  margin-bottom: auto;
-  font-size: 1.2rem;
-}
-
-.card-text3 {
-  padding: 5px;
-  margin-bottom: auto;
-  font-size: 1.2rem;
-}
-
-.card-text4 {
-  padding: 5px;
-  margin-bottom: auto;
-  font-size: 1.2rem;
-}
-
-.presentaciones {
-  width: 50%;
-  height: 50%;
-}
-
+}*/
 /*estilo para pagina de ubicación*/
 .Ubicacion {
-  align-items: center;
-  justify-content: center;
-  background-color: rgba(65, 63, 63, 0.6901960784);
+  background-image: url(../img/Mapa.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  z-index: 0;
+  background-color: rgba(0, 0, 0, 0.6235294118);
 }
 
 .list-group-item {
   border: 0 !important;
+  background-color: rgba(255, 255, 255, 0.631372549);
+}
+
+.contenDirecciones {
+  background-color: rgba(255, 255, 255, 0.631372549);
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  width: 100%;
+  height: 70%;
+  margin: 6%;
+  padding: 2%;
+  border-radius: 10px;
+  box-shadow: 1px 1px 10px gray;
 }
 
 .contenUbicacion {
   display: flex;
 }
 
-.contenDirecciones {
-  display: flex;
-  align-items: center;
-  text-align: center;
-  font-family: "Inter", sans-serif;
-  width: 100%;
-  height: 70%;
-  margin: 6% 8% 4% 8%;
-  padding: 1% 7% 1% 7%;
-  border-radius: 10px;
-  box-shadow: 1px 1px 10px gray;
-}
-
 .mapa-responsive {
-  align-items: center;
+  text-align: center;
   height: 80%;
   width: 50%;
-  margin-left: 9%;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-}
-
-.maparesponsivePequeño {
-  display: none;
 }
 
 /*estilo de fomulario*/
 .formularioUbicacion {
+  margin-top: 0%;
   margin-bottom: 50px;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
 }
 .formularioUbicacion form {
   width: 500px;
@@ -326,7 +316,7 @@ body {
   border-radius: 10px;
   margin: auto;
   margin-bottom: 10px;
-  /*background-color:rgba(83, 69, 22, 0.637);*/
+  background-color: rgba(255, 255, 255, 0.631372549);
   position: relative;
   font-family: Inter, sans-serif;
   color: rgb(19, 19, 19);
@@ -447,54 +437,43 @@ body {
   .contentCerveceria .textcerveceria .imagenParrafoCerveceria {
     margin-bottom: 2%;
   }
-  .col {
-    width: 100% !important;
+  .Ubicacion {
+    display: list-item;
+    justify-content: space-around;
   }
   .contenUbicacion {
-    padding-top: 10%;
-    height: 100vh;
-    margin-bottom: 10%;
+    height: 95vh;
+    margin-bottom: 1%;
   }
   .contenDirecciones {
-    margin: 2%;
+    margin: 12% 1% 1% 1%;
     padding: 0%;
-    height: 100%;
+    height: 80%;
     width: 100%;
-    align-items: center;
     display: grid;
     line-height: 0.8;
-    position: relative;
     font-weight: 1rem;
   }
   .contenDirecciones .mapa-responsive {
-    display: none;
-  }
-  .contenDirecciones .maparesponsivePequeño {
-    display: block;
+    text-align: center;
+    align-items: center;
   }
   .contenDirecciones .formularioUbicacion {
-    margin-top: 10%;
-    margin: 10%;
+    margin: 0%;
   }
 }
+.imagenCarrusel {
+  margin-top: 4%;
+}
+
 /* Pantalla mediana 
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
 		#encabezado{
 			height: auto;
 		}
 		#contenido{
-			width: auto;
-
-		}
-
-
-		header .hamburguesa{
-			display:none;
-		}
-
-
-
-
+			width: auto;		
+		}		
 }*/
 /*Pantalla grande */
 @media (min-width: 992px) {

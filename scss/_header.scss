@@ -1,4 +1,12 @@
-/*se fija el header*/
-header{	
-	z-index: 10;
+
+header {
+	.navbar{	
+		@include fontInter;
+			h5{
+			font-size: 2rem !important;
+		}
+			.nav-link{
+			font-size: 1.5rem !important;
+		}
+}
 }

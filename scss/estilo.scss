@@ -3,6 +3,7 @@
 @import "_variables.scss";
 @import "_footer.scss";
 @import "_mixins.scss";
+@import "_header.scss";
 
 
 /* fuente descargada en el pc */
@@ -17,7 +18,6 @@
     color:rgb(77, 53, 23)
 }
 body {
-
 	background-attachment: fixed;	
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -28,13 +28,6 @@ body {
 		@include fontInter;
 		font-weight: lighter;
 	}
-
-.contenedorMain{
-	margin-top: auto;
-	height: auto;
-	width: auto;
-	overflow: hidden;
-}
 /* estilos pagina de Index*/
 .contenVideo{
 	video{
@@ -73,13 +66,12 @@ body {
 	margin: 2%;
 	padding: 2%;
 }
-.tituloIndex{
-	margin-top: 0;
-	font-family: 'Belleza', sans-serif;
-	color: rgba(10, 10, 10, 0.836);
-	font-weight: 600;
-	font-size: 5rem;
-	
+.contenedorMain{
+	margin-top: auto;
+	height: auto;
+	width: auto;
+	overflow: hidden;
+	background-color: rgba(255, 255, 255, 0.788);
 }
 /*imagen que acompaña el texto en el index*/
 .imgHist{
@@ -97,7 +89,7 @@ body {
 		margin-bottom: 0;
 		}
 }
-.TituloParrafoIndex{
+.TituloParHist{
 	padding: 4px;
 	border-radius:2px;
 	text-align: center;
@@ -107,9 +99,8 @@ body {
 	animation: fadeInRight;
 	animation-duration: 2s;
 }
-.imgParraIn{
+.imgParraHist{
 	padding: 4px;
-	background-color: rgba(255, 255, 255, 0.877);
 	border-radius:2px;
 	text-align: center;
 	margin-top: 10px;
@@ -119,172 +110,148 @@ body {
 .imagenHistoria{
 	position: relative;
 	background-image: url(../img/fondoCervezas.jpg);
-	height: 100vh;
 	margin: 0%;
 	@include ajusteImgFondo;
 	@include fontInter;
-	z-index: 0;
-	
-	.textoHistoria{		
-		background-color: rgba(240, 248, 255, 0.507);
+	z-index: 0;	
+	.textoHistoria{
+		background-color: rgba(255, 255, 255, 0.788);
 		padding:6% 18%;
 		text-align: center;
+			.recuadro{
+				@include cuadroAmarillo
+			}
 	}
 }
 /*estilos cerveceria*/
 .contentCerveceria{
-	display: flex;
 	@include fontInter;
+	margin-top: 5%;
 	.imagenCerveceria{
-		height: auto;
-		width: auto;
+		margin: 0;
+		padding: 0%;
+		height: 100%;
+		width: 100%;
 		box-shadow: 5px 5px 10px #00000070;
 	}
 		.textcerveceria{
-			h2{
-				text-align: center;
-			}
-			margin: 4% 1% 4% 1%;
-			align-items: center;
-			text-align: center;
+			display: block;
+			.recuadro{
+				@include cuadroAmarillo
+				
+			}			
+				margin: 4% 6% 4% 6%;
+				align-items: center;
+				text-align: left;
 			
 			.imagenParrafoCerveceria{
 				position: relative;
 				border-radius: 5px;
-				width: 100%;
+				width: auto;
 				height: auto;
-				margin: 0%;
-				
+				margin: 1%;				
 				}
-	}	
-	
+	}		
 }
 /* estilos pagina de cervezas*/
 .cervezas{
 	background-image: url(../img/fondoCervezas.jpg);	
 	height: 100vh;
 	margin: 0%;
-	@include ajusteImgFondo;
-}
-		
-	.imagenCarrusel{
-		width: 50vh;
-		margin:0 auto;
-		margin-top: 4%;
-	}
-		
-	.textCarrusel{
-		@include fontInter;		
-	}
-
-.contenedorCervezas{
-	display: flex;
-	@include fontInter;
-	font-weight:normal;
-	position: relative;
-	font-size: 1.5rem;
-	
-		.col{
-		width: 50% ;
+	@include ajusteImgFondo;		
+		.imagenCarrusel{
+			width: 20%;
+			margin:0 auto;
+			margin-top: 2%;
+		}		
+		.textCarrusel{
+			@include fontInter;		
+		}
+		.carousel-inner{
+			background-color: #0000006e;
+		}
+		.carousel-item{	
+			height: 100vh;
+			margin-top: 4%;				
 		}
 }
-.fst-italic{
-	font-size: 1.5rem;
-	text-shadow: 5px 5px 10px #f3f3f370,
+/*.presentaciones{
+	display: flex;	
+	justify-content: space-between;
+			
+		.itemPresen{
+		justify-content: space-between;
+		background-color: transparent;
+		border-width: 0;
+		width: 150px;
+		height: 300px;
+		img{
+			background-color: #fff2f2;
+			width: 100%;
+		}		
+			img hover{
+				h3{
+					display:block;
+				}
+			}
+		}
+			
 	
-}
-.card{
-	align-items: center;
-	width: 100%;
-	background-color: #f0f0f038 !important;
-}
-.card-text1{
-	padding: 5px;
-	margin-bottom: auto;
-	
-}
-.card-text2{
-	padding: 5px;
-	margin-bottom: auto;
-	font-size: 1.2rem;
-}
-.card-text3{
-	padding: 5px;
-	margin-bottom: auto;
-	font-size: 1.2rem;
-}
-.card-text4{
-	padding: 5px;
-	margin-bottom: auto;
-	font-size: 1.2rem;
-}
-.presentaciones{
-	width: 50%;
-	height: 50%;	
-}
+}*/
 /*estilo para pagina de ubicación*/
 .Ubicacion{	
-	align-items: center;	
-	justify-content: center;
-	background-color: #413f3fb0;
-	
+	background-image: url(../img/Mapa.jpg);
+	@include ajusteImgFondo;
+	z-index: 0;
+	background-color: #0000009f;
 }
 .list-group-item{
 	border: 0 !important;
+	background-color: #ffffffa1;
 }
-.contenUbicacion{		
-	display: flex;
-}
-	.contenDirecciones{
+.contenDirecciones{
+	background-color: #ffffffa1;
 	display: flex;
 	align-items: center;
+	justify-content: space-evenly;
 	text-align:center;
 	@include fontInter;
 	width: 100%;
 	height: 70%;
-	margin: 6% 8% 4% 8%;
-	padding: 1% 7% 1% 7%;    
+	margin: 6%;
+	padding: 2%;    
 	border-radius: 10px;	
-	box-shadow: 1px 1px 10px gray;
-	
-	}
-	
-	.mapa-responsive{
-	align-items: center;
-	height: 80%;
-	width: 50%;
-	margin-left: 9%;	
-	position: relative;
+	box-shadow: 1px 1px 10px gray;	
+}
+.contenUbicacion{		
 	display: flex;
-    flex-direction: column;
-	}
-	.maparesponsivePequeño{
-	display: none;
-	}
-	
+}	
+.mapa-responsive{
+text-align: center;
+height: 80%;
+width: 50%;	
+}	
 /*estilo de fomulario*/
 .formularioUbicacion{
+	margin-top: 0%;
 	margin-bottom: 50px;
-	padding-bottom: 10%;
+	padding-bottom: 5%;
 	form{
 		width:500px;
 		padding:16px;
 		border-radius:10px;
 		margin:auto;
 		margin-bottom: 10px;
-		/*background-color:rgba(83, 69, 22, 0.637);*/
+		background-color: #ffffffa1;
 		position: relative;
 		font-family: Inter,sans-serif;color: rgb(19, 19, 19);
-		box-shadow: 1px 1px 10px gray;
-		
-	}
-	
+		box-shadow: 1px 1px 10px gray;		
+	}	
 	form label{
 		width:72px;
 		font-weight:bold;
 		display:inline-block;
-	}
-	
+	}	
 	form input[type="text"],
 	form input[type="email"]{
 		width:380px;
@@ -294,8 +261,7 @@ body {
 		background-color:#f6f6f6;
 		margin:8px 0;
 		display:inline-block;
-	}
-	
+	}	
 	form input[type="submit"]{
 		width:20%;
 		padding:8px 16px;
@@ -305,10 +271,10 @@ body {
 		display:block;
 		color:#fff;
 		background-color:#000;
-	} 
-	
+	}	
 	form input[type="submit"]:hover{
 		cursor:pointer;
+		
 	}	
 }
 .fondoError{
@@ -397,57 +363,43 @@ position: fixed;
 				margin-bottom: 2%;				
 				}
 			}
-		}		
-		.col{
-		width: 100% !important;
-		}				
+		}
+		.Ubicacion{
+			display: list-item;
+			justify-content: space-around;
+		}
 		.contenUbicacion{
-			padding-top: 10%;
-			height:100vh;
-			margin-bottom: 10%;			
+			height:95vh;
+			margin-bottom: 1%;			
 		}
 		.contenDirecciones{
-			margin: 2%;
+			margin: 12% 1% 1% 1%;
 			padding: 0%;
-			height: 100%;
+			height: 80%;
 			width: 100%;
-			align-items: center;
 			display:grid;
 			line-height:0.8;
-			position: relative;
-			font-weight: 1rem;			
-		
+			font-weight: 1rem;		
 		.mapa-responsive{
-		display: none;
-		}
-		.maparesponsivePequeño{
-		display: block;
-		}
+			text-align: center;
+			align-items: center;
+		}		
 		.formularioUbicacion{
-		margin-top: 10%;
-		margin: 10%;
-		}
+			margin: 0%;
 		}
 	}
-	
+	}
+	.imagenCarrusel{
+		margin-top: 4%;
+	}
 /* Pantalla mediana 
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
 		#encabezado{
 			height: auto;
 		}
 		#contenido{
-			width: auto;
-		
-		}
-		
-		
-		header .hamburguesa{
-			display:none;
-		}
-		
-		
-		
-		
+			width: auto;		
+		}		
 }*/
 
 /*Pantalla grande */
