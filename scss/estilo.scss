@@ -126,32 +126,27 @@ body {
 /*estilos cerveceria*/
 .contentCerveceria{
 	@include fontInter;
-	margin-top: 5%;
-	.imagenCerveceria{
-		margin: 0;
-		padding: 0%;
-		height: 100%;
-		width: 100%;
-		box-shadow: 5px 5px 10px #00000070;
-	}
+	margin-top: 8%;	
 		.textcerveceria{
 			display: block;
 			.recuadro{
-				@include cuadroAmarillo
-				
+				@include cuadroAmarillo				
 			}			
 				margin: 4% 6% 4% 6%;
 				align-items: center;
-				text-align: left;
-			
-			.imagenParrafoCerveceria{
-				position: relative;
-				border-radius: 5px;
-				width: auto;
-				height: auto;
-				margin: 1%;				
-				}
-	}		
+				text-align: left;			
+	}
+}
+.cajaCarruCerve{	
+	width: 80%;
+	margin: 0 auto;
+		.carousel-inner{
+			border-style:solid;
+			border-color: #cfb22d;
+			border-radius: 2px;
+			border-width: 10px;
+			margin-bottom: 2%;
+		}
 }
 /* estilos pagina de cervezas*/
 .cervezas{
@@ -160,19 +155,15 @@ body {
 	margin: 0%;
 	@include ajusteImgFondo;		
 		.imagenCarrusel{
-			width: 20%;
+			width: 45vh;
 			margin:0 auto;
-			margin-top: 2%;
+			margin-top: 6%;
 		}		
 		.textCarrusel{
 			@include fontInter;		
 		}
 		.carousel-inner{
 			background-color: #0000006e;
-		}
-		.carousel-item{	
-			height: 100vh;
-			margin-top: 4%;				
 		}
 }
 /*.presentaciones{
@@ -227,9 +218,15 @@ body {
 	display: flex;
 }	
 .mapa-responsive{
-text-align: center;
-height: 80%;
-width: 50%;	
+	text-align: center;
+	height: 80%;
+	width: 50%;
+	h3{
+		@include cuadroAmarillo	
+	}
+	h5{
+		@include cuadroAmarillo	
+	}
 }	
 /*estilo de fomulario*/
 .formularioUbicacion{
@@ -343,19 +340,16 @@ position: fixed;
 		.imgHist{
 			display: none;
 		}
+		.cajaCarruCerve{
+			width: 90%;
+		}
 		.contentCerveceria{
-			display: inline;
-			
-			.imagenCerveceria{
-				width: auto;
-				height: 50%;
-				transform: translateX(-50%); 
-			}
+			display: inline;			
 			.textcerveceria{
-			font-size: 1rem;
-			padding-bottom: 8%;
-			text-align: center;
-			
+				margin-top: 12%;
+				font-size: 1rem;
+				text-align: center;
+				font-size: 1.5rem;
 				h2{
 				text-align: center;				
 				}
@@ -387,11 +381,27 @@ position: fixed;
 		.formularioUbicacion{
 			margin: 0%;
 		}
+		}
+		.cervezas{
+			.imagenCarrusel{
+			margin-top: 15%;
+			width: 90%;
+			overflow: hidden;
+				h6{
+				font-size: 2rem;
+				}
+				p{
+				font-size: 1.5rem;
+				margin-bottom: 8%;
+				}
+			.carousel-inner{
+			height: auto;
+			width: auto;
+			}
+			}
 	}
 	}
-	.imagenCarrusel{
-		margin-top: 4%;
-	}
+	
 /* Pantalla mediana 
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
 		#encabezado{

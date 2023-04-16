@@ -187,14 +187,7 @@ body {
 /*estilos cerveceria*/
 .contentCerveceria {
   font-family: "Inter", sans-serif;
-  margin-top: 5%;
-}
-.contentCerveceria .imagenCerveceria {
-  margin: 0;
-  padding: 0%;
-  height: 100%;
-  width: 100%;
-  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.4392156863);
+  margin-top: 8%;
 }
 .contentCerveceria .textcerveceria {
   display: block;
@@ -208,12 +201,17 @@ body {
   padding: 5px;
   display: inline;
 }
-.contentCerveceria .textcerveceria .imagenParrafoCerveceria {
-  position: relative;
-  border-radius: 5px;
-  width: auto;
-  height: auto;
-  margin: 1%;
+
+.cajaCarruCerve {
+  width: 80%;
+  margin: 0 auto;
+}
+.cajaCarruCerve .carousel-inner {
+  border-style: solid;
+  border-color: #cfb22d;
+  border-radius: 2px;
+  border-width: 10px;
+  margin-bottom: 2%;
 }
 
 /* estilos pagina de cervezas*/
@@ -226,19 +224,15 @@ body {
   background-size: cover;
 }
 .cervezas .imagenCarrusel {
-  width: 20%;
+  width: 45vh;
   margin: 0 auto;
-  margin-top: 2%;
+  margin-top: 6%;
 }
 .cervezas .textCarrusel {
   font-family: "Inter", sans-serif;
 }
 .cervezas .carousel-inner {
   background-color: rgba(0, 0, 0, 0.431372549);
-}
-.cervezas .carousel-item {
-  height: 100vh;
-  margin-top: 4%;
 }
 
 /*.presentaciones{
@@ -302,6 +296,18 @@ body {
   text-align: center;
   height: 80%;
   width: 50%;
+}
+.mapa-responsive h3 {
+  background-color: #cfb22d;
+  margin: 0 auto;
+  padding: 5px;
+  display: inline;
+}
+.mapa-responsive h5 {
+  background-color: #cfb22d;
+  margin: 0 auto;
+  padding: 5px;
+  display: inline;
 }
 
 /*estilo de fomulario*/
@@ -418,18 +424,17 @@ body {
   .imgHist {
     display: none;
   }
+  .cajaCarruCerve {
+    width: 90%;
+  }
   .contentCerveceria {
     display: inline;
   }
-  .contentCerveceria .imagenCerveceria {
-    width: auto;
-    height: 50%;
-    transform: translateX(-50%);
-  }
   .contentCerveceria .textcerveceria {
+    margin-top: 12%;
     font-size: 1rem;
-    padding-bottom: 8%;
     text-align: center;
+    font-size: 1.5rem;
   }
   .contentCerveceria .textcerveceria h2 {
     text-align: center;
@@ -461,11 +466,23 @@ body {
   .contenDirecciones .formularioUbicacion {
     margin: 0%;
   }
+  .cervezas .imagenCarrusel {
+    margin-top: 15%;
+    width: 90%;
+    overflow: hidden;
+  }
+  .cervezas .imagenCarrusel h6 {
+    font-size: 2rem;
+  }
+  .cervezas .imagenCarrusel p {
+    font-size: 1.5rem;
+    margin-bottom: 8%;
+  }
+  .cervezas .imagenCarrusel .carousel-inner {
+    height: auto;
+    width: auto;
+  }
 }
-.imagenCarrusel {
-  margin-top: 4%;
-}
-
 /* Pantalla mediana 
 	@media only screen and (min-width: 768px) and (max-width: 991px) {
 		#encabezado{
