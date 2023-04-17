@@ -261,7 +261,7 @@ body {
 .copy {
   font-weight: lighter;
   color: rgb(0, 0, 0);
-  font-size: 1rem;
+  font-size: 1;
 }
 
 .textHist {
@@ -478,5 +478,23 @@ body {
   .cervezas .imagenCarrusel .carousel-inner {
     height: 50vh;
     width: 50%;
+  }
+}
+/* Pantalla mediana 
+	@media only screen and (min-width: 768px) and (max-width: 991px) {
+		#encabezado{
+			height: auto;
+		}
+		#contenido{
+			width: auto;		
+		}		
+}*/
+/*Pantalla grande */
+@media (min-width: 992px) {
+  #page_content {
+    width: 90%;
+  }
+  #page_content {
+    width: 60%;
   }
 }/*# sourceMappingURL=estilo.css.map */
