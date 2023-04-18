@@ -3,15 +3,12 @@
 @import "_variables.scss";
 @import "_footer.scss";
 @import "_mixins.scss";
+@import "_ubicacion.scss";
+@import "_index.scss";
 @import "_header.scss";
 
 
 /* fuente descargada en el pc */
-@font-face {
-	font-family: 'open sans';
-	src: url('../assets/fonts/Open_Sans/OpenSans-Light.ttf');
-    color:rgb(77, 53, 23)
-}
 @font-face {
 	font-family: 'Inter', sans-serif;
 	src: url('../assets/fonts/Inter-Medium.ttf');
@@ -24,121 +21,79 @@ body {
 	height: 100vh;
 	overflow-x: hidden;
 }
-	.parrafoTitulo{
-		@include fontInter;
-		font-weight: lighter;
-	}
-/* estilos pagina de Index*/
-.contenVideo{
-	video{
-		width: 100%;
-		height: 100vh;
-		margin: 0;
-		padding: 0;
-		object-fit: cover;
-		z-index: 0;
-		overflow: hidden;
-		display:block
-	}
-	h1{		
-		@include fontInter;
-		color: rgb(248, 250, 252);
-		font-size: 6rem;
-		text-shadow: -1px -1px 1px #00000070, 1px 1px 1px #00000070, -2px 2px 1px #00000070, 2px -2px 1px #00000070;
-		position: absolute;
-        top: 10%;
-        left: 5%;
-	}
-	h2{
-		@include fontInter;
-		color: rgb(248, 250, 252);
-		font-size: 6rem;
-		font-weight: bolder;
-		text-shadow: -1px -1px 1px #00000070, 1px 1px 1px #00000070, -2px 2px 1px #00000070, 2px -2px 1px #00000070;
-		position: absolute;
-        top: 30%;
-        left: 5%;
-	}
+.copy{
+	font-weight:lighter; 
+	color: rgb(0, 0, 0);
+	font-size: 1
 }
-.textHist{
+.fondoHistoria{	
+	background-color: #000000dc;
+	color: antiquewhite;
 	@include fontInter;
-	font-size: 1.2rem !important;
-	margin: 2%;
-	padding: 2%;
-}
-.contenedorMain{
-	margin-top: auto;
-	height: auto;
-	width: auto;
-	overflow: hidden;
-	background-color: rgba(255, 255, 255, 0.788);
-}
-/*imagen que acompaña el texto en el index*/
-.imgHist{
-	border-radius: 0% 1% 1% 0% !important;
-	height: 80%;		
-	max-width: 100%;
-}
-/*parrafo al lado de la imagen del index*/
-.textoImagen{ 
-	display: flex;
-		p {
-		font-size: 1rem;	
-		border-radius:4px;
-		height: auto;
-		margin-bottom: 0;
-		}
-}
-.TituloParHist{
-	padding: 4px;
-	border-radius:2px;
-	text-align: center;
-	height: auto;
-	margin-top: 10px;
-	margin-bottom: 10px;
-	animation: fadeInRight;
-	animation-duration: 2s;
-}
-.imgParraHist{
-	padding: 4px;
-	border-radius:2px;
-	text-align: center;
-	margin-top: 10px;
-	margin-bottom: 10px;
-}
+	font-size: 1.2rem;
 /* estilos pagina de historia*/
-.imagenHistoria{
-	position: relative;
-	background-image: url(../img/fondoCervezas.jpg);
-	margin: 0%;
-	@include ajusteImgFondo;
-	@include fontInter;
-	z-index: 0;	
 	.textoHistoria{
-		background-color: rgba(255, 255, 255, 0.788);
+		/*background-color: rgba(255, 255, 255, 0.788);*/
 		padding:6% 18%;
 		text-align: center;
 			.recuadro{
 				@include cuadroAmarillo
 			}
 	}
-}
-/*estilos cerveceria*/
-.contentCerveceria{
-	@include fontInter;
-	margin-top: 8%;	
-		.textcerveceria{
-			display: block;
-			.recuadro{
-				@include cuadroAmarillo				
-			}			
-				margin: 4% 6% 4% 6%;
-				align-items: center;
-				text-align: left;			
+/*parrafo al lado de la imagen de historia*/
+	.textoImagenHis{ 
+		display: flex;
+		align-items: center;
+			p {
+			font-size: 1rem;
+			}
 	}
 }
+.textHist{
+	font-size: 2rem;
+	margin: 2% 8% 1% 6%;
+	padding: 2%;
+}
+/*imagen que acompaña el texto en el index*/
+.imgHist{
+	width: 90%;
+	border-radius: 0% 1% 1% 0% !important;
+}
+.TituloParHist{
+	font-size: 2rem;
+	padding: 4px;
+	text-align: center;
+	animation: fadeInRight;
+	animation-duration: 2.5s;
+}
+.imgParraHist{
+	img{
+		background-color: antiquewhite;
+		border-radius:2px;
+	}
+	padding: 4px;	
+	text-align: center;
+}
+/*estilos cerveceria*/
+.fondoCerveceria{
+	background-color: #000000dc;
+}
+.contentCerveceria{	
+	@include fontInter;
+	margin-top: 6%;	
+	color: antiquewhite;
+		.textcerveceria{
+			display: block;
+			margin: 4% 10% 4% 10%;
+			align-items: center;
+			text-align: left;
+			.recuadro{
+				@include cuadroAmarillo				
+			}					
+		}
+}
 .cajaCarruCerve{	
-	width: 80%;
+	width: 90%;
 	margin: 0 auto;
 		.carousel-inner{
 			border-style:solid;
@@ -164,115 +119,8 @@ body {
 		}
 		.carousel-inner{
 			background-color: #0000006e;
+			height: 100vh;
 		}
-}
-/*.presentaciones{
-	display: flex;	
-	justify-content: space-between;
-			
-		.itemPresen{
-		justify-content: space-between;
-		background-color: transparent;
-		border-width: 0;
-		width: 150px;
-		height: 300px;
-		img{
-			background-color: #fff2f2;
-			width: 100%;
-		}		
-			img hover{
-				h3{
-					display:block;
-				}
-			}
-		}
-			
-	
-}*/
-/*estilo para pagina de ubicación*/
-.Ubicacion{	
-	background-image: url(../img/Mapa.jpg);
-	@include ajusteImgFondo;
-	z-index: 0;
-	background-color: #0000009f;
-}
-.list-group-item{
-	border: 0 !important;
-	background-color: #ffffffa1;
-}
-.contenDirecciones{
-	background-color: #ffffffa1;
-	display: flex;
-	align-items: center;
-	justify-content: space-evenly;
-	text-align:center;
-	@include fontInter;
-	width: 100%;
-	height: 70%;
-	margin: 6%;
-	padding: 2%;    
-	border-radius: 10px;	
-	box-shadow: 1px 1px 10px gray;	
-}
-.contenUbicacion{		
-	display: flex;
-}	
-.mapa-responsive{
-	text-align: center;
-	height: 80%;
-	width: 50%;
-	h3{
-		@include cuadroAmarillo	
-	}
-	h5{
-		@include cuadroAmarillo	
-	}
-}	
-/*estilo de fomulario*/
-.formularioUbicacion{
-	margin-top: 0%;
-	margin-bottom: 50px;
-	padding-bottom: 5%;
-	form{
-		width:500px;
-		padding:16px;
-		border-radius:10px;
-		margin:auto;
-		margin-bottom: 10px;
-		background-color: #ffffffa1;
-		position: relative;
-		font-family: Inter,sans-serif;color: rgb(19, 19, 19);
-		box-shadow: 1px 1px 10px gray;		
-	}	
-	form label{
-		width:72px;
-		font-weight:bold;
-		display:inline-block;
-	}	
-	form input[type="text"],
-	form input[type="email"]{
-		width:380px;
-		padding:3px 10px;
-		border:1px solid #f6f6f6;
-		border-radius:3px;
-		background-color:#f6f6f6;
-		margin:8px 0;
-		display:inline-block;
-	}	
-	form input[type="submit"]{
-		width:20%;
-		padding:8px 16px;
-		margin-top:32px;		
-		border:1px solid #000;
-		border-radius:5px;
-		display:block;
-		color:#fff;
-		background-color:#000;
-	}	
-	form input[type="submit"]:hover{
-		cursor:pointer;
-		
-	}	
 }
 .fondoError{
 	background-image: url(../img/vasovacio.jpg);
@@ -291,133 +139,59 @@ position: fixed;
 	margin-right: 1%;
 	padding: 1%;
 	margin-top: 15%;
-	background-color: #00000079;
-	border-radius: 3px;
-	
+	background-color:  #cfb22d;
+	border-radius: 3px;	
 	}
 /* pantalla pequeña */
 	@media only screen and (max-width: 767px){	
-		.parrafoTitulo h1{
-		font-size: 5rem;
-		}
 		.parrafoError{
 			font-size: 0.5rem !important;
 			margin-top: 50%;
 			margin-left: 50%;
 			margin-right: 2%;
 		}
-		.contenVideo{
-			video{
-				width: auto;
-				transform: translateX(-55%); 
-				position: fixed;
-			}
-			h1{
-				font-size: 6rem;
-			}
-			h2{
-				font-size: 5rem;
-				top: 40%;
-			}
-		}
-		.textoImagen{
-		margin: 0 auto;		
-		font-size: 0.5rem;		
-		display: flex;
-		}		
-		.imagenHistoria{
-			position: relative;
+		.row{
+			display: grid;
 		}
 		.textoHistoria{
-			padding: 10% 5% !important;
-			@include fontInter;
-		}
-		.textHist{
-			font-size: 1rem !important;
-			margin: 2%;
-			padding: 1%;
-		}
-		.imgHist{
-			display: none;
+			padding: 10% 5% !important;			
+		}		
+		.fondoHistoria .textoImagenHis p {
+			font-size: 1.1rem;
 		}
 		.cajaCarruCerve{
 			width: 90%;
 		}
 		.contentCerveceria{
-			display: inline;			
+			display: grid;			
 			.textcerveceria{
-				margin-top: 12%;
-				font-size: 1rem;
-				text-align: center;
+				margin-top: 8%;
 				font-size: 1.5rem;
+				text-align: center;
 				h2{
-				text-align: center;				
+					text-align: center;				
 				}
 				.imagenParrafoCerveceria{
-				margin-bottom: 2%;				
+					margin-bottom: 3%;				
 				}
 			}
-		}
-		.Ubicacion{
-			display: list-item;
-			justify-content: space-around;
-		}
-		.contenUbicacion{
-			height:95vh;
-			margin-bottom: 1%;			
-		}
-		.contenDirecciones{
-			margin: 12% 1% 1% 1%;
-			padding: 0%;
-			height: 80%;
-			width: 100%;
-			display:grid;
-			line-height:0.8;
-			font-weight: 1rem;		
-		.mapa-responsive{
-			text-align: center;
-			align-items: center;
-		}		
-		.formularioUbicacion{
-			margin: 0%;
-		}
 		}
 		.cervezas{
 			.imagenCarrusel{
 			margin-top: 15%;
-			width: 90%;
+			width: 50%;
 			overflow: hidden;
 				h6{
 				font-size: 2rem;
 				}
 				p{
-				font-size: 1.5rem;
+				font-size: 1rem;
 				margin-bottom: 8%;
 				}
 			.carousel-inner{
-			height: auto;
-			width: auto;
+			height: 50vh;
+			width: 50%;
 			}
 			}
 	}
-	}
-	
-/* Pantalla mediana 
-	@media only screen and (min-width: 768px) and (max-width: 991px) {
-		#encabezado{
-			height: auto;
-		}
-		#contenido{
-			width: auto;		
-		}		
-}*/
-
-/*Pantalla grande */
-	@media (min-width: 992px) {
-		#page_content{
-			width: 90%;
-		}
-		#page_content{
-			width: 60%;
-		}
-	}
+}

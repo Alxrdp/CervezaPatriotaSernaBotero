@@ -2,8 +2,9 @@
 footer {	
     z-index: 10;
     position: fixed;
-    bottom: 0;
-    right: 0;
+    bottom: 2px;
+    right: 2px;
+	align-items: end;
         ul{
 		list-style: none;
         }
@@ -16,10 +17,11 @@ footer {
 		color:#a722ac !important;
 	}
 		.fa-facebook:before{
-		color:#2422ac !important;
+		color:#2c29c7 !important;
 	}
 		.fa-twitter:before{
 		color:#2172dd !important;
+		
 	}
 			
 		.contenedorRedes ul li a:hover {
@@ -33,6 +35,6 @@ footer {
 .copy a{
 	text-decoration: none !important;
 	color: #333333;
-	align-self: center !important;
+	align-items: center !important;
 	
 }
