@@ -44,7 +44,6 @@ footer .contenedorRedes ul li a:hover {
   align-items: center !important;
 }
 
-/*estilo para pagina de ubicación*/
 .fondoUbicacion {
   background-color: rgba(0, 0, 0, 0.862745098);
   color: antiquewhite;
@@ -172,6 +171,7 @@ footer .contenedorRedes ul li a:hover {
     margin: 0 auto;
   }
   .Ubicacion .contenDirecciones .mapa-responsive {
+    margin: auto;
     width: auto;
     text-align: center;
     align-items: center;
@@ -180,7 +180,6 @@ footer .contenedorRedes ul li a:hover {
     margin: 15% auto 2% auto;
   }
 }
-/* estilos pagina de Index*/
 .contenVideo {
   font-family: "Inter", sans-serif;
 }
